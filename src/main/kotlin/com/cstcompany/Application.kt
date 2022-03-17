@@ -3,9 +3,43 @@ package com.cstcompany
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 import com.cstcompany.plugins.*
+import io.ktor.server.application.*
+import java.io.File
+import java.io.FileInputStream
+import java.security.KeyStore
 
 fun main() {
-    embeddedServer(Netty, port = 80, host = "0.0.0.0") {
-        configureRouting()
-    }.start(wait = true)
+    val ks = KeyStore.getInstance("JKS")
+
+
+    val pwd = File("pwd")
+
+    val passwords = pwd.readText().split(';')
+    val keyPassword = passwords[0]
+    val jksPassword = passwords[1]
+    val alias = passwords[2]
+
+    FileInputStream("keystore.jks").use { file->
+        ks.load(file, keyPassword.toCharArray())
+    }
+
+
+    val environment = applicationEngineEnvironment {
+        module(Application::configureRouting)
+
+        connector {
+            port=80
+        }
+
+        sslConnector(
+            keyStore = ks,
+            keyAlias = alias,
+            keyStorePassword = {jksPassword.toCharArray()},
+            privateKeyPassword = {keyPassword.toCharArray()},
+        ){
+            port = 443
+        }
+    }
+
+    embeddedServer(Netty, environment = environment).start(wait = true)
 }
