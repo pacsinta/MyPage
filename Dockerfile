@@ -7,4 +7,6 @@ FROM openjdk:17
 EXPOSE 8088:8088
 RUN mkdir /app
 COPY --from=build /home/gradle/src/build/libs/*.jar /app/MyPage.jar
+COPY --from=build /home/gradle/src/pwd /app/pwd
+COPY --from=build /home/gradle/src/keystore.jks /app/keystore.jks
 ENTRYPOINT ["java","-jar","/app/MyPage.jar"]
