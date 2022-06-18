@@ -28,7 +28,7 @@ fun main() {
         module(Application::configureRouting)
 
         connector {
-            port=80
+            port=8088
         }
 
         sslConnector(
