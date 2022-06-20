@@ -8,6 +8,11 @@ import java.io.File
 fun Application.configureRouting() {
 
     routing {
+        get("/love") {
+            val index = File("KarinaVers.html")
+            call.respondFile(index)
+        }
+
         get("/") {
             val index = File("index.html")
             call.respondFile(index)
