@@ -1,12 +1,10 @@
 FROM gradle:7-jdk17 AS build
 COPY --chown=gradle:gradle . /home/gradle/src
 WORKDIR /home/gradle/src
-RUN gradle shadowJar --no-daemon
+RUN bash ./gradlew installDist
 
 FROM openjdk:17
 EXPOSE 8088:8088
-RUN mkdir /app
-COPY --from=build /home/gradle/src/build/libs/*.jar /app/MyPage.jar
-COPY /home/gradle/src/pwd /app/pwd
-COPY /home/gradle/src/keystore.jks /app/keystore.jks
-ENTRYPOINT ["java","-jar","/app/MyPage.jar"]
+COPY pwd /home/gradle/src/build/install/MyPage/bin/pwd
+COPY keystore.jks /home/gradle/src/build/install/MyPage/bin/keystore.jks
+CMD bash /home/gradle/src/build/install/MyPage/bin/MyPage
