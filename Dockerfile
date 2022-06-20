@@ -1,11 +1,11 @@
-FROM gradle:7-jdk17 AS builder
+FROM gradle:7-jdk18 AS builder
 COPY . /home/gradle/src
 WORKDIR /home/gradle/src
-RUN bash ./gradlew installDist
+RUN gradle shadowJar --no-daemon
 
-FROM openjdk:17
+FROM openjdk:18
 EXPOSE 8088:8088
-COPY --from=builder /home/gradle/src/build/install/MyPage/bin/MyPage /app/MyPage
+COPY --from=builder /home/gradle/src/build/libs/*.jar /app/MyPage.jar
 COPY pwd /app/pwd
 COPY keystore.jks /app/keystore.jks
-CMD bash /app/MyPage
+ENTRYPOINT ["java","-jar","/app/ktor-docker-sample.jar"]
