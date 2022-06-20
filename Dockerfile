@@ -1,5 +1,6 @@
 FROM gradle:7-jdk18 AS builder
-COPY . /home/gradle/src
+COPY src /home/gradle/src/src
+COPY build.gradle.kts /home/gradle/src/build.gradle.kts
 WORKDIR /home/gradle/src
 RUN gradle shadowJar --no-daemon
 
