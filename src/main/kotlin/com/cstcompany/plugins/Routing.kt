@@ -9,12 +9,12 @@ fun Application.configureRouting() {
 
     routing {
         get("/love") {
-            val index = File("KarinaVers.html")
+            val index = File("pages/KarinaVers.html")
             call.respondFile(index)
         }
 
         get("/") {
-            val index = File("index.html")
+            val index = File("pages/index.html")
             call.respondFile(index)
         }
     }
