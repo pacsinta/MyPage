@@ -9,5 +9,5 @@ EXPOSE 8088
 COPY --from=builder /home/gradle/src/build/libs/*.jar /app/MyPage.jar
 COPY pwd /app/pwd
 COPY keystore.jks /app/keystore.jks
-COPY pages /app/pages
+COPY src/main/resources/pages /app/pages
 CMD cd /app && java -jar MyPage.jar

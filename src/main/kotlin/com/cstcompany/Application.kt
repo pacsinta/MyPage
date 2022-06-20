@@ -26,6 +26,7 @@ fun main() {
 
     val environment = applicationEngineEnvironment {
         module(Application::configureRouting)
+        module(Application::configureFreeMarker)
 
         connector {
             port=8088
