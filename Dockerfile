@@ -8,4 +8,4 @@ EXPOSE 8088:8088
 COPY --from=builder /home/gradle/src/build/libs/*.jar /app/MyPage.jar
 COPY pwd /app/pwd
 COPY keystore.jks /app/keystore.jks
-CMD java -jar /app/MyPage.jar
+CMD cd /app && java -jar MyPage.jar
