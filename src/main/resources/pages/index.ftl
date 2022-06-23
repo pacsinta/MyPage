@@ -1,3 +1,5 @@
+<#import "contentTitle.ftl" as contentTitle/>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,33 +24,12 @@ and is wrapped around the whole page content, except for the footer in this exam
         <p>Learn everything about <span class="w3-tag">programming</span></p>
     </header>
 
-    ${test}
-
     <!-- Grid -->
     <div class="w3-row">
 
-        <!-- Blog entries -->
-        <div class="w3-col l8 s12">
-            <!-- Blog entry -->
-            <div class="w3-card-4 w3-margin w3-white">
-                <img src="/w3images/bridge.jpg" alt="Norway" style="width:100%">
-                <div class="w3-container">
-                    <h3><b>BLOG ENTRY</b></h3>
-                    <h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5>
-                </div>
-
-                <div class="w3-container">
-                    <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed
-                        tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-                    <div class="w3-row">
-                        <div class="w3-col m8 s12">
-                            <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- END BLOG ENTRIES -->
-        </div>
+        <#list posts as post>
+            <@contentTitle.contentTitleBlock title=post.title title2=post.title2 description=post.description image=post.image/>
+        </#list>
 
         <!-- Introduction menu -->
         <div class="w3-col l4">

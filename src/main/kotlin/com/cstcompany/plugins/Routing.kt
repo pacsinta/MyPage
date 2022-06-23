@@ -1,5 +1,7 @@
 package com.cstcompany.plugins
 
+import com.cstcompany.data.BlogPost
+import com.cstcompany.data.Image
 import io.ktor.server.routing.*
 import io.ktor.server.application.*
 import io.ktor.server.freemarker.*
@@ -15,7 +17,9 @@ fun Application.configureRouting() {
         }
 
         get("/") {
-            call.respond(FreeMarkerContent("index.ftl", mapOf("test" to "<h1>Kotlin</h1>")))
+            val testContent = listOf(BlogPost("Test", "Test", "Test", Image("", "Test"), "Test"))
+            val index = FreeMarkerContent("index.ftl", mapOf("posts" to testContent))
+            call.respond(index)
         }
 
         get("/tutorials/ktor-1"){

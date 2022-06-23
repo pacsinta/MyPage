@@ -9,9 +9,8 @@ import java.io.FileInputStream
 import java.security.KeyStore
 
 fun main() {
+    //Setup ssh key
     val ks = KeyStore.getInstance("JKS")
-
-
     val pwd = File("pwd")
 
     val passwords = pwd.readText().split(';')
@@ -22,6 +21,10 @@ fun main() {
     FileInputStream("keystore.jks").use { file->
         ks.load(file, keyPassword.toCharArray())
     }
+
+    //Load contents
+    fun getResourceAsText(path: String): String? = object {}.javaClass.getResource(path)?.readText()
+
 
 
     val environment = applicationEngineEnvironment {
