@@ -2,13 +2,15 @@ package com.cstcompany.plugins
 
 import com.cstcompany.data.BlogPost
 import com.cstcompany.data.Image
+import io.ktor.http.*
 import io.ktor.server.routing.*
 import io.ktor.server.application.*
 import io.ktor.server.freemarker.*
 import io.ktor.server.response.*
 import java.io.File
+import kotlin.math.log
 
-fun Application.configureRouting() {
+fun Application.configureRouting(posts: MutableList<BlogPost>) {
 
     routing {
         get("/love") {
@@ -17,13 +19,21 @@ fun Application.configureRouting() {
         }
 
         get("/") {
-            val testContent = listOf(BlogPost("Test", "Test", "Test", Image("", "Test"), "Test"))
-            val index = FreeMarkerContent("index.ftl", mapOf("posts" to testContent))
+            val index = FreeMarkerContent("index.ftl", mapOf("posts" to posts))
             call.respond(index)
         }
 
-        get("/tutorials/ktor-1"){
+        get("/tutorials/{name}"){
+            val post = posts.find {
+                it.redirectLocation == call.parameters["name"]
+            }
 
+            if(post==null){
+                call.respond(HttpStatusCode.BadRequest, "Invalid url")
+            }else{
+                val index = FreeMarkerContent("contentBase.ftl", mapOf("title" to post.title))
+                call.respond(index)
+            }
         }
     }
 }

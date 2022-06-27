@@ -1,5 +1,7 @@
 package com.cstcompany
 
+import com.cstcompany.data.BlogPost
+import com.cstcompany.data.Image
 import com.cstcompany.plugins.*
 import io.ktor.server.application.*
 import io.ktor.server.engine.*
@@ -13,8 +15,33 @@ const val HTTPS_PORT = 443
 const val ENABLE_HTTPS = false
 const val LOCALHOST_ONLY = true
 fun main() {
+    fun convert(path: String): MutableList<BlogPost> {
+        val posts = mutableListOf<BlogPost>()
+        File("$path/tutorials").walk().forEach {
+            if (it.isFile && it.name == "description.txt") {
+                val lines = it.readLines()
+                posts.add(
+                    BlogPost(
+                        title = lines[0],
+                        title2 = lines[1],
+                        contentLocation = it.parent + "/index.html",
+                        description = lines[2],
+                        image = if (lines.size > 4) Image(name = lines[4], url = it.parent + "/image1") else Image(
+                            "",
+                            ""
+                        ),
+                        redirectLocation = lines[3]
+                    )
+                )
+            }
+        }
+
+        return posts
+    }
+
     //Load contents
-    fun getResourceAsText(path: String): String? = object {}.javaClass.getResource(path)?.readText()
+    val contentDescriptionsPath = object {}.javaClass.getResource("/pages/")?.path!!
+    val posts = convert(contentDescriptionsPath)
 
     var ks: KeyStore? = null
     var keyPassword: String? = null
@@ -36,12 +63,14 @@ fun main() {
     }
 
     val environment = applicationEngineEnvironment {
-        module(Application::configureRouting)
-        module(Application::configureFreeMarker)
+        module {
+            configureFreeMarker()
+            configureRouting(posts)
+        }
 
         connector {
             port = HTTP_PORT
-            if(LOCALHOST_ONLY){
+            if (LOCALHOST_ONLY) {
                 host = "127.0.0.1"
             }
         }

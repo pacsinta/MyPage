@@ -5,5 +5,6 @@ data class BlogPost(
     val title2: String,
     val description: String,
     val image: Image,
-    val content: String
+    val contentLocation: String,
+    val redirectLocation: String
 )

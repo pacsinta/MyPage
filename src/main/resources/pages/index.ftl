@@ -28,7 +28,7 @@ and is wrapped around the whole page content, except for the footer in this exam
     <div class="w3-row">
 
         <#list posts as post>
-            <@contentTitle.contentTitleBlock title=post.title title2=post.title2 description=post.description image=post.image/>
+            <@contentTitle.contentTitleBlock title=post.title title2=post.title2 description=post.description image=post.image redirectLocation=post.redirectLocation/>
         </#list>
 
         <!-- Introduction menu -->
@@ -37,8 +37,8 @@ and is wrapped around the whole page content, except for the footer in this exam
             <div class="w3-card w3-margin w3-margin-top">
                 <img src="/w3images/avatar_g.jpg" style="width:100%">
                 <div class="w3-container w3-white">
-                    <h4><b>My Name</b></h4>
-                    <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
+                    <h4><b>Patrik Csikós</b></h4>
+                    <p>I am just a student in Budapest. My content is totally free, but you can support my work with donations.</p>
                 </div>
             </div><hr>
 
@@ -52,21 +52,6 @@ and is wrapped around the whole page content, except for the footer in this exam
                         <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
                         <span class="w3-large">Lorem</span><br>
                         <span>Sed mattis nunc</span>
-                    </li>
-                    <li class="w3-padding-16">
-                        <img src="/w3images/gondol.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-                        <span class="w3-large">Ipsum</span><br>
-                        <span>Praes tinci sed</span>
-                    </li>
-                    <li class="w3-padding-16">
-                        <img src="/w3images/skies.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-                        <span class="w3-large">Dorum</span><br>
-                        <span>Ultricies congue</span>
-                    </li>
-                    <li class="w3-padding-16 w3-hide-medium w3-hide-small">
-                        <img src="/w3images/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-                        <span class="w3-large">Mingsum</span><br>
-                        <span>Lorem ipsum dipsum</span>
                     </li>
                 </ul>
             </div>
@@ -97,11 +82,11 @@ and is wrapped around the whole page content, except for the footer in this exam
 </div>
 
 <!-- Footer -->
-<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+<!--<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
     <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
     <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
     <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
+</footer>-->
 
 </body>
 </html>
