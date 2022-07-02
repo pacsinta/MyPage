@@ -23,15 +23,24 @@ fun Application.configureRouting(posts: MutableList<BlogPost>) {
             call.respond(index)
         }
 
-        get("/tutorials/{name}"){
+        get("/tutorials/{name}") {
             val post = posts.find {
                 it.redirectLocation == call.parameters["name"]
             }
 
-            if(post==null){
+            if (post == null) {
                 call.respond(HttpStatusCode.BadRequest, "Invalid url")
-            }else{
-                val index = FreeMarkerContent("contentBase.ftl", mapOf("title" to post.title))
+            } else {
+                var content = ""
+                content = File(post.contentLocation).readText()
+                val index = FreeMarkerContent(
+                    "contentBase.ftl",
+                    mapOf(
+                        "title" to post.title,
+                        "image" to post.image,
+                        "content" to content
+                    )
+                )
                 call.respond(index)
             }
         }
