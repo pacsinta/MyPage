@@ -6,13 +6,6 @@
             It means that we can build a web application like a web page or a web api with it.
             It is based on kotlin and provides asynchronous programming with coroutines.
         </p>
-        <div class="w3-panel w3-leftbar w3-light-grey">
-            <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
-            <p>Chef, Coffeeist and Owner: Liam Brown</p>
-        </div>
-        <img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
-        <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
-        <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
     </div>
 </div>
 
@@ -53,60 +46,63 @@
 
         <p>
             Now that we installed Intellij we can start our first ktor project.
-            
+            Open intellij and click the new Project button.
+            Now you should see a similar window to this:
         </p>
-
-    </div>
-</div>
-
-<div class="w3-container" id="menu">
-    <div class="w3-content" style="max-width:700px">
-
-        <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">INSTALLATION</span></h5>
-
-        <div class="w3-row w3-center w3-card w3-padding">
-            <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
-                <div class="w3-col s6 tablink">Eat</div>
-            </a>
-            <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
-                <div class="w3-col s6 tablink">Drink</div>
-            </a>
-        </div>
-
-        <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
-            <h5>Bread Basket</h5>
-            <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
-
-            <h5>Honey Almond Granola with Fruits</h5>
-            <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
-
-            <h5>Belgian Waffle</h5>
-            <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br>
-
-            <h5>Scrambled eggs</h5>
-            <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
-
-            <h5>Blueberry Pancakes</h5>
-            <p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>
-        </div>
-
-        <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
-            <h5>Coffee</h5>
-            <p class="w3-text-grey">Regular coffee 2.50</p><br>
-
-            <h5>Chocolato</h5>
-            <p class="w3-text-grey">Chocolate espresso with milk 4.50</p><br>
-
-            <h5>Corretto</h5>
-            <p class="w3-text-grey">Whiskey and coffee 5.00</p><br>
-
-            <h5>Iced tea</h5>
-            <p class="w3-text-grey">Hot tea, except not hot 3.00</p><br>
-
-            <h5>Soda</h5>
-            <p class="w3-text-grey">Coke, Sprite, Fanta, etc. 2.50</p>
-        </div>
-        <img src="/w3images/coffeehouse2.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+        <img src="/tutorial-images/ktor/1/newproject.png" alt="new project" class="w3-image">
+        <p>
+            Choose the ktor generator on the left to create the project.
+            Now feel free to change the name, the location and the website domain of the project.
+            Leave the other fields as they are.
+        </p>
+        <img src="/tutorial-images/ktor/1/nameproject.png" alt="configure project" class="w3-image">
+        <p>
+            Now we can add some plugins for our project.
+            For out first project we only need the Routing plugin. It can be easily added by searching the plugin and clicking the add button.
+            After this we can finally create the project by clicking the create button.
+        </p>
+        <img src="/tutorial-images/ktor/1/addplugin.png" alt="add plugin" class="w3-image">
+        <p>
+            The creating can take a while, but after the project is created you should see a message like this:
+            BUILD IS SUCCESSFUL in 1m50s.
+            This means that the project was created successfully.
+        </p>
+        <p>
+            In the left side of the IDE you should see the project tree.
+            For this project we care only about the first folder.
+            You can open it by clicking the arrow icon next to the folder name.
+        </p>
+        <img src="/tutorial-images/ktor/1/tree.png" alt="project tree" class="w3-image">
+        <p>
+            In this chapter we only need to care about the src folder.
+            Open it!
+            It contains a main and a test folder.
+            The test folder contains the test cases for our project and the main folder contains
+            the code for the application.
+        </p>
+        <p>
+            Inside the main folder we can see a kotlin and a resources folder.
+            Open the kotlin folder.
+            Now you should see a file called Application.kt
+        </p>
+        <img src="/tutorial-images/ktor/1/fulltree.png" alt="full project tree" class="w3-image">
+        <p>
+            After opening the Application.kt file we can see a few lines of code.
+            Change the host value from "0.0.0.0" to "127.0.0.1".
+            Now you can run the project by clicking the green triangle next to the "fun main()".
+        </p>
+        <img src="/tutorial-images/ktor/1/helloworld.png" alt="hello world project" class="w3-image">
+        <p>
+            If the project building was successful you should see the following message at the bottom of the screen:
+            "Responding at http://127.0.0.1:8088"
+            By clicking on the blue link you can open your first page in the browser.
+        </p>
+        <p>
+            If you can see a page with the text "Hello World" in your default browser you are done with this chapter.
+        </p>
+        <p>
+            Congratulations you made your first website with Ktor!
+        </p>
     </div>
 </div>
 

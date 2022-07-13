@@ -13,7 +13,7 @@ import java.security.KeyStore
 const val HTTP_PORT = 8088
 const val HTTPS_PORT = 443
 const val ENABLE_HTTPS = false
-const val LOCALHOST_ONLY = true
+const val LOCALHOST_ONLY = false
 fun main() {
     fun convert(path: String): MutableList<BlogPost> {
         val posts = mutableListOf<BlogPost>()

@@ -35,15 +35,18 @@ and is wrapped around the whole page content, except for the footer in this exam
         <div class="w3-col l4">
             <!-- About Card -->
             <div class="w3-card w3-margin w3-margin-top">
-                <img src="/w3images/avatar_g.jpg" style="width:100%">
+                <img src="/tutorial-images/profile.jpg" style="width:100%">
                 <div class="w3-container w3-white">
                     <h4><b>Patrik Csikós</b></h4>
-                    <p>I am just a student in Budapest. My content is totally free, but you can support my work with donations.</p>
+                    <p>
+                        I am a student in Budapest. My content is totally free. Please be aware that I am a human, so I can make mistakes.
+                        I will try to fix them so please let me know if you find one.
+                    </p>
                 </div>
             </div><hr>
 
             <!-- Posts -->
-            <div class="w3-card w3-margin">
+            <#--<div class="w3-card w3-margin">
                 <div class="w3-container w3-padding">
                     <h4>Popular Posts</h4>
                 </div>
@@ -55,10 +58,10 @@ and is wrapped around the whole page content, except for the footer in this exam
                     </li>
                 </ul>
             </div>
-            <hr>
+            <hr>-->
 
             <!-- Labels / tags -->
-            <div class="w3-card w3-margin">
+            <#--<div class="w3-card w3-margin">
                 <div class="w3-container w3-padding">
                     <h4>Tags</h4>
                 </div>
@@ -71,7 +74,7 @@ and is wrapped around the whole page content, except for the footer in this exam
                     </p>
                 </div>
             </div>
-
+            -->
             <!-- END Introduction Menu -->
         </div>
 
