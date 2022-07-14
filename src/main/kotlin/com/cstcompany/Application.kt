@@ -41,6 +41,7 @@ fun main() {
 
     //Load contents
     val contentDescriptionsPath = object {}.javaClass.getResource("/pages/")?.path!!
+    println("Path: $contentDescriptionsPath")
     val posts = convert(contentDescriptionsPath)
 
     var ks: KeyStore? = null
