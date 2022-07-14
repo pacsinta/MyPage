@@ -14,7 +14,7 @@ const val HTTP_PORT = 8088
 const val HTTPS_PORT = 443
 const val ENABLE_HTTPS = false
 const val LOCALHOST_ONLY = false
-fun main() {
+fun main(args: Array<String>) {
     fun convert(path: String): MutableList<BlogPost> {
         val posts = mutableListOf<BlogPost>()
         File("$path/tutorials").walk().forEach {
