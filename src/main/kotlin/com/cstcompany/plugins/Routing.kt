@@ -15,6 +15,7 @@ fun Application.configureRouting(posts: MutableList<BlogPost>) {
         static("/tutorial-images") {
             staticBasePackage = pageLocation
             resource("profile.jpg")
+            resource("google0dee9f0367abf7ae.html")
             static("/ktor/1") {
                 staticBasePackage = "$pageLocation/tutorials/ktor/1"
                 resource("newproject.png")
