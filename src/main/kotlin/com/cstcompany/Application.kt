@@ -3,6 +3,7 @@ package com.cstcompany
 import com.cstcompany.data.BlogPost
 import com.cstcompany.data.Image
 import com.cstcompany.plugins.configureFreeMarker
+import com.cstcompany.plugins.configureRedirect
 import com.cstcompany.plugins.configureRouting
 import io.github.classgraph.ClassGraph
 import io.ktor.server.engine.*
@@ -18,7 +19,7 @@ import java.security.KeyStore
 const val HTTP_PORT = 8088
 const val HTTPS_PORT = 443
 var ENABLE_HTTPS = true
-var LOCALHOST_ONLY = true
+var LOCALHOST_ONLY = false
 
 lateinit var pageLocation: String
 fun main(args: Array<String>) {
@@ -127,6 +128,7 @@ fun main(args: Array<String>) {
         module {
             configureFreeMarker()
             configureRouting(posts)
+            configureRedirect()
         }
 
         connector {
@@ -137,6 +139,8 @@ fun main(args: Array<String>) {
         }
 
         if (ENABLE_HTTPS) {
+
+
             sslConnector(
                 keyStore = ks!!,
                 keyAlias = alias!!,

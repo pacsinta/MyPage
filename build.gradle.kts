@@ -34,4 +34,7 @@ dependencies {
 
     //ClassGraph
     implementation("io.github.classgraph:classgraph:4.8.149")
+
+    //HttpRedirect
+    implementation("io.ktor:ktor-server-http-redirect:$ktor_version")
 }
