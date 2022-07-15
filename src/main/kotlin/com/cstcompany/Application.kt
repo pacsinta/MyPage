@@ -16,7 +16,7 @@ import java.security.KeyStore
 
 
 const val HTTP_PORT = 8088
-const val HTTPS_PORT = 443
+const val HTTPS_PORT = 8087
 const val ENABLE_HTTPS = true
 const val LOCALHOST_ONLY = false
 
@@ -107,6 +107,9 @@ fun main(args: Array<String>) {
                 privateKeyPassword = { keyPassword!!.toCharArray() },
             ) {
                 port = HTTPS_PORT
+                if (LOCALHOST_ONLY) {
+                    host = "127.0.0.1"
+                }
             }
         }
     }
