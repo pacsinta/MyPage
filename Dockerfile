@@ -6,6 +6,7 @@ RUN gradle shadowJar --no-daemon
 
 FROM openjdk:18
 EXPOSE 8088
+EXPOSE 443
 COPY --from=builder /home/gradle/src/build/libs/*.jar /app/MyPage.jar
 COPY pwd /app/pwd
 COPY keystore.jks /app/keystore.jks
