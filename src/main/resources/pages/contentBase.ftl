@@ -34,12 +34,12 @@
         <div class="w3-col s3">
             <a href="/" class="w3-button w3-block w3-black">HOME</a>
         </div>
-        <div class="w3-col s3">
+        <#--<div class="w3-col s3">
             <a href="#about" class="w3-button w3-block w3-black">NEXT TUTORIAL</a>
         </div>
         <div class="w3-col s3">
             <a href="#menu" class="w3-button w3-block w3-black">PREVIOUS TUTORIAL</a>
-        </div>
+        </div>-->
     </div>
 </div>
 

@@ -9,7 +9,7 @@
         </#if>
         <div class="w3-container">
             <h3><b>${title}</b></h3>
-            <h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5>
+            <h5>${title2}</h5>
         </div>
 
         <div class="w3-container">

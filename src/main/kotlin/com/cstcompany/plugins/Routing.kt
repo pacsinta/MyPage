@@ -10,7 +10,7 @@ import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import java.io.File
 
-fun Application.configureRouting(posts: MutableList<BlogPost>) {
+fun Application.configureRouting(posts: List<BlogPost>) {
     routing {
         staticBasePackage = pageLocation
         resource("google0dee9f0367abf7ae.html")

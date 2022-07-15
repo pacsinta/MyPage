@@ -18,11 +18,11 @@ import java.security.KeyStore
 const val HTTP_PORT = 8088
 const val HTTPS_PORT = 443
 const val ENABLE_HTTPS = true
-const val LOCALHOST_ONLY = false
+const val LOCALHOST_ONLY = true
 
 lateinit var pageLocation: String
 fun main(args: Array<String>) {
-    fun convert(path: String): MutableList<BlogPost> {
+    fun convert(path: String): List<BlogPost> {
         val posts = mutableListOf<BlogPost>()
 
         var resourceNames: List<URL?>
@@ -38,24 +38,40 @@ fun main(args: Array<String>) {
 
                     val parentFolder = resourceName.path.removeSuffix("/description.txt").replaceBefore("/pages/", "")
 
-                    posts.add(
-                        BlogPost(
-                            title = lines[0],
-                            title2 = lines[1],
-                            contentLocation = "$parentFolder/index.html",
-                            description = lines[2],
-                            image = if (lines.size > 4) Image(name = lines[4], url = "$parentFolder/image1") else Image(
-                                "",
-                                ""
-                            ),
-                            redirectLocation = lines[3]
+                    if(lines[0] != "not ready"){
+                        posts.add(
+                            BlogPost(
+                                title = lines[0],
+                                title2 = lines[1],
+                                contentLocation = "$parentFolder/index.html",
+                                description = lines[2],
+                                image = if (lines.size > 4) Image(name = lines[4], url = "$parentFolder/image1") else Image(
+                                    "",
+                                    ""
+                                ),
+                                redirectLocation = lines[3]
+                            )
                         )
-                    )
+                    }else if(LOCALHOST_ONLY){
+                        posts.add(
+                            BlogPost(
+                                title = lines[1],
+                                title2 = lines[2],
+                                contentLocation = "$parentFolder/index.html",
+                                description = lines[3],
+                                image = if (lines.size > 5) Image(name = lines[5], url = "$parentFolder/image1") else Image(
+                                    "",
+                                    ""
+                                ),
+                                redirectLocation = lines[4]
+                            )
+                        )
+                    }
                 }
             }
         }
 
-        return posts
+        return posts.reversed()
     }
 
     pageLocation = if (args.isEmpty()) {
