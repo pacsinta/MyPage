@@ -2,20 +2,22 @@ package com.cstcompany
 
 import com.cstcompany.data.BlogPost
 import com.cstcompany.data.Image
-import com.cstcompany.plugins.*
+import com.cstcompany.plugins.configureFreeMarker
+import com.cstcompany.plugins.configureRouting
 import io.github.classgraph.ClassGraph
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
-import java.io.*
+import java.io.BufferedReader
+import java.io.File
+import java.io.FileInputStream
+import java.io.InputStreamReader
 import java.net.URL
-import java.nio.charset.StandardCharsets
 import java.security.KeyStore
-import java.util.stream.Collectors.toList
 
 
 const val HTTP_PORT = 8088
 const val HTTPS_PORT = 443
-const val ENABLE_HTTPS = false
+const val ENABLE_HTTPS = true
 const val LOCALHOST_ONLY = false
 
 lateinit var pageLocation: String
