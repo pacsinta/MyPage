@@ -34,7 +34,7 @@ fun main(args: Array<String>) {
                     val stream = resourceName.openStream()
                     val lines = BufferedReader(InputStreamReader(stream)).readLines()
 
-                    val parentFolder = resourceName.path.removeSuffix("/description.txt")
+                    val parentFolder = resourceName.path.removeSuffix("/description.txt").replaceBefore("/pages/", "")
 
                     posts.add(
                         BlogPost(

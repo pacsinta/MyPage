@@ -13,16 +13,16 @@ import java.io.File
 fun Application.configureRouting(posts: MutableList<BlogPost>) {
     routing {
         static("/tutorial-images") {
-            staticRootFolder = File("src/main/resources/pages")
-            file("profile.jpg")
+            staticBasePackage = pageLocation
+            resource("profile.jpg")
             static("/ktor/1") {
-                staticRootFolder = File(staticRootFolder!!.path + "/tutorials/ktor/1")
-                file("newproject.png")
-                file("nameproject.png")
-                file("addplugin.png")
-                file("tree.png")
-                file("fulltree.png")
-                file("helloworld.png")
+                staticBasePackage = "$pageLocation/tutorials/ktor/1"
+                resource("newproject.png")
+                resource("nameproject.png")
+                resource("addplugin.png")
+                resource("tree.png")
+                resource("fulltree.png")
+                resource("helloworld.png")
             }
         }
 
@@ -53,8 +53,12 @@ fun Application.configureRouting(posts: MutableList<BlogPost>) {
             if (post == null) {
                 call.respond(HttpStatusCode.BadRequest, "Invalid url")
             } else {
-                var content = ""
-                content = File(post.contentLocation).readText()
+                val content = object {}.javaClass.getResource(post.contentLocation)?.readText()
+                if(content == null) {
+                    call.respond(HttpStatusCode.BadRequest, "Invalid url")
+                    return@get
+                }
+
                 val index = FreeMarkerContent(
                     "contentBase.ftl",
                     mapOf(
