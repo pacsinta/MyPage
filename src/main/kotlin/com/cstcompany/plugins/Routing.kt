@@ -1,7 +1,7 @@
 package com.cstcompany.plugins
 
 import com.cstcompany.data.BlogPost
-import com.cstcompany.data.Image
+import com.cstcompany.pageLocation
 import io.ktor.http.*
 import io.ktor.server.routing.*
 import io.ktor.server.application.*
@@ -9,14 +9,13 @@ import io.ktor.server.freemarker.*
 import io.ktor.server.http.content.*
 import io.ktor.server.response.*
 import java.io.File
-import kotlin.math.log
 
 fun Application.configureRouting(posts: MutableList<BlogPost>) {
     routing {
         static("/tutorial-images") {
             staticRootFolder = File("src/main/resources/pages")
             file("profile.jpg")
-            static("/ktor/1"){
+            static("/ktor/1") {
                 staticRootFolder = File(staticRootFolder!!.path + "/tutorials/ktor/1")
                 file("newproject.png")
                 file("nameproject.png")
@@ -37,8 +36,8 @@ fun Application.configureRouting(posts: MutableList<BlogPost>) {
             call.respond(index)
         }
 
-        get("/feedback"){
-            if(call.request.queryParameters["Name"] != null && call.request.queryParameters["Message"] != null){
+        get("/feedback") {
+            if (call.request.queryParameters["Name"] != null && call.request.queryParameters["Message"] != null) {
                 call.application.environment.log.info("New message -> ${call.request.queryParameters["Name"]} : ${call.request.queryParameters["Message"]}")
                 // TODO save message to database
                 call.respondRedirect("/")

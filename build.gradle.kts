@@ -31,4 +31,7 @@ dependencies {
 
     //FreeMarker
     implementation("io.ktor:ktor-server-freemarker:$ktor_version")
+
+    //ClassGraph
+    implementation("io.github.classgraph:classgraph:4.8.149")
 }
