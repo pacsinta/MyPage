@@ -17,8 +17,8 @@ import java.security.KeyStore
 
 const val HTTP_PORT = 8088
 const val HTTPS_PORT = 443
-const val ENABLE_HTTPS = true
-const val LOCALHOST_ONLY = true
+var ENABLE_HTTPS = true
+var LOCALHOST_ONLY = true
 
 lateinit var pageLocation: String
 fun main(args: Array<String>) {
@@ -32,34 +32,40 @@ fun main(args: Array<String>) {
 
         resourceNames.forEach { resourceName ->
             if (resourceName != null) {
-                if(resourceName.path.contains("description.txt")) {
+                if (resourceName.path.contains("description.txt")) {
                     val stream = resourceName.openStream()
                     val lines = BufferedReader(InputStreamReader(stream)).readLines()
 
                     val parentFolder = resourceName.path.removeSuffix("/description.txt").replaceBefore("/pages/", "")
 
-                    if(lines[0] != "not ready"){
+                    if (lines[0] != "not ready") {
                         posts.add(
                             BlogPost(
                                 title = lines[0],
                                 title2 = lines[1],
                                 contentLocation = "$parentFolder/index.html",
                                 description = lines[2],
-                                image = if (lines.size > 4) Image(name = lines[4], url = "$parentFolder/image1") else Image(
+                                image = if (lines.size > 4) Image(
+                                    name = lines[4],
+                                    url = "$parentFolder/image1"
+                                ) else Image(
                                     "",
                                     ""
                                 ),
                                 redirectLocation = lines[3]
                             )
                         )
-                    }else if(LOCALHOST_ONLY){
+                    } else if (LOCALHOST_ONLY) {
                         posts.add(
                             BlogPost(
                                 title = lines[1],
                                 title2 = lines[2],
                                 contentLocation = "$parentFolder/index.html",
                                 description = lines[3],
-                                image = if (lines.size > 5) Image(name = lines[5], url = "$parentFolder/image1") else Image(
+                                image = if (lines.size > 5) Image(
+                                    name = lines[5],
+                                    url = "$parentFolder/image1"
+                                ) else Image(
                                     "",
                                     ""
                                 ),
@@ -74,10 +80,25 @@ fun main(args: Array<String>) {
         return posts.reversed()
     }
 
-    pageLocation = if (args.isEmpty()) {
+    val config: MutableMap<String, String> = mutableMapOf()
+    args.forEach { arg ->
+        val split = arg.split("=")
+        if (split.size == 2) {
+            config[split[0]] = split[1]
+        }
+    }
+
+    pageLocation = if (!config.containsKey("pageLocation")) {
         "pages"
     } else {
-        args[0]
+        config["pageLocation"].toString()
+    }
+
+    if (config.containsKey("https")) {
+        ENABLE_HTTPS = config["https"] == "1"
+    }
+    if (config.containsKey("localhost")) {
+        LOCALHOST_ONLY = config["localhost"] == "1"
     }
 
     //Load contents
