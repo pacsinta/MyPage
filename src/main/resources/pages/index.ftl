@@ -39,8 +39,7 @@ and is wrapped around the whole page content, except for the footer in this exam
                 <div class="w3-container w3-white">
                     <h4><b>Patrik Csikós</b></h4>
                     <p>
-                        I am a student in Budapest. My content is totally free. Please be aware that I am a human, so I can make mistakes.
-                        I will try to fix them so please let me know if you find one.
+                        Hi! I am a software engineer student in Budapest. Please feel free to contact me if you have any questions. My email is pacsinta@gmail.com.
                     </p>
                 </div>
             </div><hr>

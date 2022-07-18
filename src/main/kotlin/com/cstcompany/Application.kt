@@ -19,7 +19,7 @@ import java.security.KeyStore
 const val HTTP_PORT = 8088
 const val HTTPS_PORT = 443
 var ENABLE_HTTPS = true
-var LOCALHOST_ONLY = false
+var LOCALHOST_ONLY = true
 
 lateinit var pageLocation: String
 fun main(args: Array<String>) {

@@ -56,7 +56,7 @@ fun Application.configureRouting(posts: List<BlogPost>) {
                 call.respond(HttpStatusCode.BadRequest, "Invalid url")
             } else {
                 val content = object {}.javaClass.getResource(post.contentLocation)?.readText()
-                if(content == null) {
+                if (content == null) {
                     call.respond(HttpStatusCode.BadRequest, "Invalid url")
                     return@get
                 }
