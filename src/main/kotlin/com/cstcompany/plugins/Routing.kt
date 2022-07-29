@@ -1,16 +1,29 @@
 package com.cstcompany.plugins
 
+import com.cstcompany.POST_REFRESH_DELAY
 import com.cstcompany.data.BlogPost
 import com.cstcompany.pageLocation
+import com.cstcompany.readData
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.freemarker.*
 import io.ktor.server.http.content.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import java.io.File
 
-fun Application.configureRouting(posts: List<BlogPost>) {
+fun Application.configureRouting(postsBuff: List<BlogPost>) {
+    var posts = postsBuff
+    launch {
+        while (true) {
+            delay(POST_REFRESH_DELAY)
+            posts = readData(pageLocation)
+            log.info("Posts refreshed")
+        }
+    }
+
     routing {
         staticBasePackage = pageLocation
         resource("google0dee9f0367abf7ae.html")

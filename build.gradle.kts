@@ -37,4 +37,7 @@ dependencies {
 
     //HttpRedirect
     implementation("io.ktor:ktor-server-http-redirect:$ktor_version")
+
+    //KMongo
+    implementation("org.litote.kmongo:kmongo:4.6.1")
 }
