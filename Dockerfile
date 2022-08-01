@@ -10,4 +10,5 @@ EXPOSE 443
 COPY --from=builder /home/gradle/src/build/libs/*.jar /app/MyPage.jar
 COPY pwd /app/pwd
 COPY keystore.jks /app/keystore.jks
+COPY kmongoConfig /app/kmongoConfig
 CMD cd /app && java -jar MyPage.jar localhost=0 https=1
