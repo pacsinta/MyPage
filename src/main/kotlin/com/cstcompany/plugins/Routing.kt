@@ -3,6 +3,7 @@ package com.cstcompany.plugins
 import com.cstcompany.POST_REFRESH_DELAY
 import com.cstcompany.data.BlogPost
 import com.cstcompany.database.impl.MainDataMongodbImpl
+import com.cstcompany.images
 import com.cstcompany.pageLocation
 import com.cstcompany.readData
 import io.ktor.http.*
@@ -21,6 +22,12 @@ fun Application.configureRouting(posts: List<BlogPost>) {
     routing {
         staticBasePackage = pageLocation
         resource("google0dee9f0367abf7ae.html")
+        resource("song.mp3")
+        for(image in images){
+            staticBasePackage = "$pageLocation/love_img"
+            resource(image)
+        }
+
         static("/tutorial-images") {
             staticBasePackage = pageLocation
             resource("profile.jpg")
@@ -55,6 +62,17 @@ fun Application.configureRouting(posts: List<BlogPost>) {
                 call.respondRedirect("/")
             }
             call.response.status(HttpStatusCode.BadRequest)
+        }
+
+        get("/loveyou"){
+            val index = FreeMarkerContent(
+                "LoveYou100.ftl",
+                mapOf(
+                    "posts" to images.shuffled()
+                )
+            )
+
+            call.respond(index)
         }
 
         get("/tutorials/{name}") {

@@ -65,3 +65,23 @@ fun readData(path: String): List<BlogPost> {
 
     return posts.reversed()
 }
+
+fun readData2(path: String): List<String> {
+    val posts = mutableListOf<String>()
+
+    var resourceNames: List<URL?>
+    ClassGraph()
+        .acceptPaths("$path")
+        .scan().use { scanResult -> resourceNames = scanResult.allResources.urLs }
+
+    resourceNames.forEach { resourceName ->
+        if (resourceName != null) {
+            if(resourceName.path.contains(".jpg")){
+                val img = resourceName.path.replaceBefore("img/", "").removePrefix("img/")
+                posts.add(img)
+            }
+        }
+    }
+
+    return posts.reversed()
+}

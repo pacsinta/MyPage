@@ -20,6 +20,7 @@ var MONGODB_CLUSTER = "cluster0.hgi0p"
 var DATABASE_NAME = "MyPageTest"
 
 lateinit var pageLocation: String
+var images: List<String> = mutableListOf()
 fun main(args: Array<String>) {
     // Load the configurations from the args
     val config: MutableMap<String, String> = mutableMapOf()
@@ -66,6 +67,7 @@ fun main(args: Array<String>) {
 
     //Load contents
     val posts = readData(pageLocation)
+    images = readData2("pages/love_img")
 
     // Configure https if enabled
     var ks: KeyStore? = null
@@ -86,6 +88,8 @@ fun main(args: Array<String>) {
             ks.load(file, keyPassword.toCharArray())
         }
     }
+
+
 
     // Configure the server
     val environment = applicationEngineEnvironment {
