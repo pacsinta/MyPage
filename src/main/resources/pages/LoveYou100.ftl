@@ -80,9 +80,10 @@
 
 <h1>Ha kételkednél nézd meg h nincs miért!</h1>
 <p>
-    Ha hiányzol, ennyi kép jön a segítségemre, hogy rájöjjek mennyire csodálatos vagy.
+    Ha hiányzol, ennyi és ehhez hasonló képek jönnek a segítségemre, hogy rájöjjek mennyire csodálatos vagy.
 </p>
-<p>Te másképp vagy vele de én az összes képen szeretlek!</p>
+<p>Tudom te másképp vagy vele de én az összes képen szeretlek! <3 <3 <3 </p>
+
 <audio controls autoplay>
     <source src="song.mp3" type="audio/mpeg">
 </audio>
