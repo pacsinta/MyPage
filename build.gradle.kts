@@ -40,4 +40,7 @@ dependencies {
 
     //KMongo
     implementation("org.litote.kmongo:kmongo:4.6.1")
+
+    //Compression
+    implementation("io.ktor:ktor-server-compression:$ktor_version")
 }

@@ -46,7 +46,7 @@ and is wrapped around the whole page content, except for the footer in this exam
         <div class="w3-col l4">
             <!-- About Card -->
             <div class="w3-card w3-margin w3-margin-top">
-                <img src="/tutorial-images/profile.jpg" style="width:100%">
+                <img src="/tutorial-images/profile.jpg" style="width:100%" alt="A picture of me.">
                 <div class="w3-container w3-white">
                     <h4><b>Patrik Csikós</b></h4>
                     <p>

@@ -93,6 +93,7 @@ fun main(args: Array<String>) {
             configureFreeMarker()
             configureRouting(posts)
             configureRedirect()
+            configureCompression()
         }
 
         connector {
