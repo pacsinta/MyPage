@@ -4,7 +4,8 @@
 <html>
 <head>
     <title>IT is FUN</title>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" lang="en">
+    <meta name="description" content="This is page where you can learn everything about technology, programming and a lot more.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
