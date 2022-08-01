@@ -1,28 +1,25 @@
 package com.cstcompany
 
-import com.cstcompany.plugins.configureFreeMarker
-import com.cstcompany.plugins.configureRedirect
-import com.cstcompany.plugins.configureRouting
+import com.cstcompany.plugins.*
+import com.mongodb.client.MongoDatabase
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.withContext
+import org.litote.kmongo.getCollection
+import java.io.Console
 import java.io.File
 import java.io.FileInputStream
 import java.security.KeyStore
 
 
 const val HTTP_PORT = 8088
-const val HTTPS_PORT = 443
+const val HTTPS_PORT = 8087
 var ENABLE_HTTPS = true
 var LOCALHOST_ONLY = true
 var POST_REFRESH_DELAY = 1000L //* 60 * 10  // 10 minutes in milliseconds
+var MONGODB_CLUSTER = "cluster0.hgi0p"
 
 lateinit var pageLocation: String
 fun main(args: Array<String>) {
-
     // Load the configurations from the args
     val config: MutableMap<String, String> = mutableMapOf()
     args.forEach { arg ->
@@ -46,6 +43,32 @@ fun main(args: Array<String>) {
     }
     if (config.containsKey("refreshDelay")) {
         POST_REFRESH_DELAY = config["refreshDelay"]!!.toLong()
+    }
+    if(config.containsKey("mongo_name") && config.containsKey("mongo_pwd") && config.containsKey("mongo_database")){
+        configureDatabase(
+            name = config["mongo_name"],
+            pwd = config["mongo_pwd"],
+            database = config["mongo_database"]
+        )
+    }else if(config.containsKey("mongo_name") || config.containsKey("mongo_pwd") || config.containsKey("mongo_database")){
+        throw Error("A name and a password is needed to configure mongodb!")
+    }else{
+        var file = "kmongoConfig"
+        if(config.containsKey("kmongo_file")){
+            file = config["kmongo_file"]!!
+        }
+        configureDatabase(file = file)
+    }
+
+    data class Test(val counter: Int)
+
+    //Load data from database
+    val database = kmongoData.client.getDatabase("MyPage")
+    val counter = database.getCollection<Test>("MainData")
+    counter.insertOne(Test(1))
+    val t = counter.find().first()
+    if (t != null) {
+        println(t.counter)
     }
 
     //Load contents

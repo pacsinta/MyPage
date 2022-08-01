@@ -2,6 +2,7 @@ package com.cstcompany.plugins
 
 import com.cstcompany.POST_REFRESH_DELAY
 import com.cstcompany.data.BlogPost
+import com.cstcompany.database.impl.MainDataMongodbImpl
 import com.cstcompany.pageLocation
 import com.cstcompany.readData
 import io.ktor.http.*
@@ -14,15 +15,8 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.io.File
 
-fun Application.configureRouting(postsBuff: List<BlogPost>) {
-    var posts = postsBuff
-    launch {
-        while (true) {
-            delay(POST_REFRESH_DELAY)
-            posts = readData(pageLocation)
-            log.info("Posts refreshed")
-        }
-    }
+fun Application.configureRouting(posts: List<BlogPost>) {
+    val mainDataRepository = MainDataMongodbImpl
 
     routing {
         staticBasePackage = pageLocation
@@ -54,7 +48,9 @@ fun Application.configureRouting(postsBuff: List<BlogPost>) {
         get("/feedback") {
             if (call.request.queryParameters["Name"] != null && call.request.queryParameters["Message"] != null) {
                 call.application.environment.log.info("New message -> ${call.request.queryParameters["Name"]} : ${call.request.queryParameters["Message"]}")
-                // TODO save message to database
+
+                mainDataRepository.saveMessage(call.request.queryParameters["Name"]!!, call.request.queryParameters["Message"]!!)
+
                 call.respondRedirect("/")
             }
             call.response.status(HttpStatusCode.BadRequest)
