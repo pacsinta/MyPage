@@ -17,6 +17,7 @@ var ENABLE_HTTPS = true
 var LOCALHOST_ONLY = true
 var POST_REFRESH_DELAY = 1000L //* 60 * 10  // 10 minutes in milliseconds
 var MONGODB_CLUSTER = "cluster0.hgi0p"
+var DATABASE_NAME = "MyPageTest"
 
 lateinit var pageLocation: String
 fun main(args: Array<String>) {
@@ -44,6 +45,9 @@ fun main(args: Array<String>) {
     if (config.containsKey("refreshDelay")) {
         POST_REFRESH_DELAY = config["refreshDelay"]!!.toLong()
     }
+    if(config.containsKey("database_name")){
+        DATABASE_NAME = config["database_name"]!!
+    }
     if(config.containsKey("mongo_name") && config.containsKey("mongo_pwd") && config.containsKey("mongo_database")){
         configureDatabase(
             name = config["mongo_name"],
@@ -58,17 +62,6 @@ fun main(args: Array<String>) {
             file = config["kmongo_file"]!!
         }
         configureDatabase(file = file)
-    }
-
-    data class Test(val counter: Int)
-
-    //Load data from database
-    val database = kmongoData.client.getDatabase("MyPage")
-    val counter = database.getCollection<Test>("MainData")
-    counter.insertOne(Test(1))
-    val t = counter.find().first()
-    if (t != null) {
-        println(t.counter)
     }
 
     //Load contents

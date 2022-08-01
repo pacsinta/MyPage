@@ -8,8 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50%;
+        }
     </style>
 </head>
 <body class="w3-light-grey">
@@ -84,11 +94,12 @@ and is wrapped around the whole page content, except for the footer in this exam
 </div>
 
 <!-- Footer -->
-<!--<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
-    <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
-    <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>-->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top w3-center">
+    <a href="https://www.facebook.com/patrik.csikos.92/" class="fa fa-facebook"></a>
+    <a href="https://www.youtube.com/channel/UC3i9tEauejbNpqI2OORNk2g" class="fa fa-youtube"></a>
+    <a href="https://www.instagram.com/the_patrik_company/" class="fa fa-instagram"></a>
+    <a href="https://github.com/pacsinta/" class="fa fa-github"></a>
+</footer>
 
 </body>
 </html>

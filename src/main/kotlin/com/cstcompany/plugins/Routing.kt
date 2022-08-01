@@ -42,6 +42,7 @@ fun Application.configureRouting(posts: List<BlogPost>) {
 
         get("/") {
             val index = FreeMarkerContent("index.ftl", mapOf("posts" to posts))
+            mainDataRepository.incrementViewCount("index")
             call.respond(index)
         }
 
@@ -79,6 +80,7 @@ fun Application.configureRouting(posts: List<BlogPost>) {
                         "url" to "/feedback"
                     )
                 )
+                mainDataRepository.incrementViewCount(post.title)
                 call.respond(index)
             }
         }

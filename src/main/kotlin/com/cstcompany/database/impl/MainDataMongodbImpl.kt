@@ -1,5 +1,6 @@
 package com.cstcompany.database.impl
 
+import com.cstcompany.DATABASE_NAME
 import com.cstcompany.database.MainDataRepository
 import com.cstcompany.plugins.kmongoData
 import com.mongodb.client.MongoDatabase
@@ -8,7 +9,7 @@ import org.litote.kmongo.findOne
 import org.litote.kmongo.getCollection
 
 object MainDataMongodbImpl : MainDataRepository{
-    private val MyPageDatabase: MongoDatabase = kmongoData.client.getDatabase("MyPage")
+    private val MyPageDatabase: MongoDatabase = kmongoData.client.getDatabase(DATABASE_NAME)
 
 
     // View counter
@@ -19,8 +20,12 @@ object MainDataMongodbImpl : MainDataRepository{
         return counter.findOne(ViewCount::title eq title)?.count ?: 0
     }
     override fun incrementViewCount(title: String) {
-        val count = ViewCount(title, getViewCount(title) + 1)
-        counter.insertOne(count)
+        val count = getViewCount(title)
+        val viewCount = ViewCount(title,  count+1)
+        val res = counter.replaceOne(ViewCount::count eq count, viewCount)
+        if(res.matchedCount == 0L){
+            counter.insertOne(viewCount)
+        }
     }
 
 
