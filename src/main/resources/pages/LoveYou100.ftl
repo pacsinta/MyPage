@@ -61,6 +61,10 @@
             text-align: center;
         }
 
+        img{
+            width: 80%;
+            height: auto;
+        }
         @keyframes fade {
             from {opacity: .4}
             to {opacity: 1}
@@ -87,7 +91,7 @@
 
     <#list posts as post>
         <div class="mySlides fade">
-            <img src=${post} style="width:100%">
+            <img src=${post}>
         </div>
     </#list>
 </div>
