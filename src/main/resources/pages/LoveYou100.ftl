@@ -89,6 +89,7 @@
 </audio>
 
 <div class="slideshow-container">
+    <button onclick="showSlides()">Start</button>
 
     <#list posts as post>
         <div class="mySlides fade">
@@ -100,7 +101,6 @@
 
 <script>
     let slideIndex = 0;
-    showSlides();
 
     function showSlides() {
         let i;
