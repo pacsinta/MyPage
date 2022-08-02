@@ -72,6 +72,7 @@ fun Application.configureRouting(posts: List<BlogPost>) {
                 )
             )
 
+            mainDataRepository.incrementViewCount("loveyou")
             call.respond(index)
         }
 
