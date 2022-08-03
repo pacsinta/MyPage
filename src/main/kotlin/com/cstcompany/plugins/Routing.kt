@@ -5,6 +5,10 @@ import com.cstcompany.data.BlogPost
 import com.cstcompany.database.impl.MainDataMongodbImpl
 import com.cstcompany.images
 import com.cstcompany.pageLocation
+import com.cstcompany.pages.karina.imageShow
+import com.cstcompany.pages.karina.karinavers1
+import com.cstcompany.pages.tutorials.index
+import com.cstcompany.pages.tutorials.ktor.ktor1
 import com.cstcompany.readData
 import io.ktor.http.*
 import io.ktor.server.application.*
@@ -22,36 +26,11 @@ fun Application.configureRouting(posts: List<BlogPost>) {
     routing {
         staticBasePackage = pageLocation
         resource("google0dee9f0367abf7ae.html")
-        resource("song.mp3")
-        for(image in images){
-            staticBasePackage = "$pageLocation/love_img"
-            resource(image)
-        }
-
         static("/tutorial-images") {
-            staticBasePackage = pageLocation
-            resource("profile.jpg")
-            static("/ktor/1") {
-                staticBasePackage = "$pageLocation/tutorials/ktor/1"
-                resource("newproject.png")
-                resource("nameproject.png")
-                resource("addplugin.png")
-                resource("tree.png")
-                resource("fulltree.png")
-                resource("helloworld.png")
-            }
+            ktor1()
         }
 
-        get("/love") {
-            val index = File("pages/KarinaVers.html")
-            call.respondFile(index)
-        }
 
-        get("/") {
-            val index = FreeMarkerContent("index.ftl", mapOf("posts" to posts))
-            mainDataRepository.incrementViewCount("index")
-            call.respond(index)
-        }
 
         get("/feedback") {
             if (call.request.queryParameters["Name"] != null && call.request.queryParameters["Message"] != null) {
@@ -64,44 +43,8 @@ fun Application.configureRouting(posts: List<BlogPost>) {
             call.response.status(HttpStatusCode.BadRequest)
         }
 
-        get("/loveyou"){
-            val index = FreeMarkerContent(
-                "LoveYou100.ftl",
-                mapOf(
-                    "posts" to images.shuffled()
-                )
-            )
-
-            mainDataRepository.incrementViewCount("loveyou")
-            call.respond(index)
-        }
-
-        get("/tutorials/{name}") {
-            val post = posts.find {
-                it.redirectLocation == call.parameters["name"]
-            }
-
-            if (post == null) {
-                call.respond(HttpStatusCode.BadRequest, "Invalid url")
-            } else {
-                val content = object {}.javaClass.getResource(post.contentLocation)?.readText()
-                if (content == null) {
-                    call.respond(HttpStatusCode.BadRequest, "Invalid url")
-                    return@get
-                }
-
-                val index = FreeMarkerContent(
-                    "contentBase.ftl",
-                    mapOf(
-                        "title" to post.title,
-                        "image" to post.image,
-                        "content" to content,
-                        "url" to "/feedback"
-                    )
-                )
-                mainDataRepository.incrementViewCount(post.title)
-                call.respond(index)
-            }
-        }
+        imageShow()
+        karinavers1()
+        index(posts)
     }
 }
