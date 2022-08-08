@@ -18,6 +18,7 @@ var LOCALHOST_ONLY = true
 var POST_REFRESH_DELAY = 1000L //* 60 * 10  // 10 minutes in milliseconds
 var MONGODB_CLUSTER = "cluster0.hgi0p"
 var DATABASE_NAME = "MyPageTest"
+const val JWT_LIFETIME = 60000  // 1 minute in milliseconds
 
 lateinit var pageLocation: String
 var images: List<String> = mutableListOf()
@@ -46,20 +47,20 @@ fun main(args: Array<String>) {
     if (config.containsKey("refreshDelay")) {
         POST_REFRESH_DELAY = config["refreshDelay"]!!.toLong()
     }
-    if(config.containsKey("database_name")){
+    if (config.containsKey("database_name")) {
         DATABASE_NAME = config["database_name"]!!
     }
-    if(config.containsKey("mongo_name") && config.containsKey("mongo_pwd") && config.containsKey("mongo_database")){
+    if (config.containsKey("mongo_name") && config.containsKey("mongo_pwd") && config.containsKey("mongo_database")) {
         configureDatabase(
             name = config["mongo_name"],
             pwd = config["mongo_pwd"],
             database = config["mongo_database"]
         )
-    }else if(config.containsKey("mongo_name") || config.containsKey("mongo_pwd") || config.containsKey("mongo_database")){
+    } else if (config.containsKey("mongo_name") || config.containsKey("mongo_pwd") || config.containsKey("mongo_database")) {
         throw Error("A name and a password is needed to configure mongodb!")
-    }else{
+    } else {
         var file = "kmongoConfig"
-        if(config.containsKey("kmongo_file")){
+        if (config.containsKey("kmongo_file")) {
             file = config["kmongo_file"]!!
         }
         configureDatabase(file = file)
@@ -90,11 +91,11 @@ fun main(args: Array<String>) {
     }
 
 
-
     // Configure the server
     val environment = applicationEngineEnvironment {
         module {
             configureFreeMarker()
+            configureJWT()
             configureRouting(posts)
             configureRedirect()
             configureCompression()

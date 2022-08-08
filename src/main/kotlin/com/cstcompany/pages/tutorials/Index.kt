@@ -10,12 +10,14 @@ import io.ktor.server.http.content.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 
-fun Route.index(posts: List<BlogPost>){
+fun Route.index(posts: List<BlogPost>) {
     val mainDataRepository = MainDataMongodbImpl
 
-    static("/tutorial-images"){
+    static("/tutorial-images") {
         staticBasePackage = pageLocation
-        resource("profile.jpg")
+        preCompressed {
+            resource("profile.jpg")
+        }
     }
 
     get("/") {
