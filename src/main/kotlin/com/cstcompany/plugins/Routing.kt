@@ -24,7 +24,10 @@ fun Application.configureRouting(posts: List<BlogPost>) {
 
     routing {
         staticBasePackage = pageLocation
-        resource("google0dee9f0367abf7ae.html")
+        preCompressed {
+            resource("google0dee9f0367abf7ae.html")
+            resource("28b51a4b5486b2348815fa26b5a6262e.html")
+        }
         static("/tutorial-images") {
             ktor1()
             ktor2()
