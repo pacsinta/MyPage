@@ -1,4 +1,4 @@
-val ktor_version = "2.0.2"
+val ktor_version = "2.0.3"
 val kotlin_version = "1.6.10"
 val logback_version = "1.2.11"
 
@@ -47,4 +47,7 @@ dependencies {
     // Jwt
     implementation("io.ktor:ktor-server-auth:$ktor_version")
     implementation("io.ktor:ktor-server-auth-jwt:$ktor_version")
+
+    //Session
+    implementation("io.ktor:ktor-server-sessions:$ktor_version")
 }

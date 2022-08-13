@@ -9,6 +9,7 @@ import com.cstcompany.pages.karina.imageShow
 import com.cstcompany.pages.karina.karinavers1
 import com.cstcompany.pages.tutorials.index
 import com.cstcompany.pages.tutorials.ktor.ktor1
+import com.cstcompany.pages.tutorials.ktor.ktor2
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.freemarker.*
@@ -26,6 +27,7 @@ fun Application.configureRouting(posts: List<BlogPost>) {
         resource("google0dee9f0367abf7ae.html")
         static("/tutorial-images") {
             ktor1()
+            ktor2()
         }
 
         get("/feedback") {

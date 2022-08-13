@@ -95,6 +95,7 @@ fun main(args: Array<String>) {
     val environment = applicationEngineEnvironment {
         module {
             configureFreeMarker()
+            configureSession()
             configureJWT()
             configureRouting(posts)
             configureRedirect()
