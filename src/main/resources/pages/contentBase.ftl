@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+
+    <#-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style>
         body, html {
             height: 100%;
@@ -79,7 +83,11 @@
 
 <#-- Footer -->
 <footer class="w3-center w3-light-grey w3-padding-48 w3-large">
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+    <a href="https://www.facebook.com/patrik.csikos.92/" class="fa fa-facebook"></a>
+    <a href="https://www.youtube.com/channel/UC3i9tEauejbNpqI2OORNk2g" class="fa fa-youtube"></a>
+    <a href="https://www.instagram.com/the_patrik_company/" class="fa fa-instagram"></a>
+    <a href="https://github.com/pacsinta/" class="fa fa-github"></a>
+    <a class="fa f"
 </footer>
 
 </body>
