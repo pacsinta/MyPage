@@ -1,6 +1,6 @@
-val ktor_version = "2.0.3"
+val ktor_version = "2.1.1"
 val kotlin_version = "1.6.10"
-val logback_version = "1.2.11"
+val logback_version = "1.4.0"
 
 plugins {
     application
@@ -40,7 +40,7 @@ dependencies {
     implementation("io.ktor:ktor-server-http-redirect:$ktor_version")
 
     //KMongo
-    implementation("org.litote.kmongo:kmongo:4.6.1")
+    implementation("org.litote.kmongo:kmongo:4.7.1")
 
     //Compression
     implementation("io.ktor:ktor-server-compression:$ktor_version")
@@ -48,6 +48,4 @@ dependencies {
     // Jwt
     implementation("io.ktor:ktor-server-auth:$ktor_version")
     implementation("io.ktor:ktor-server-auth-jwt:$ktor_version")
-
-    //Session
 }
