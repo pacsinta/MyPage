@@ -1,7 +1,7 @@
 <#import "contentTitle.ftl" as contentTitle/>
 
 <!DOCTYPE html>
-<html>
+<html lang="EN">
 <head>
     <title>IT is FUN</title>
     <meta charset="UTF-8" lang="en">
@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    // Adsense
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1294464437207802"
+            crossorigin="anonymous"></script>
+
     <style>
         body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 

@@ -20,7 +20,15 @@ fun Route.index(posts: List<BlogPost>) {
         }
     }
 
-    get("/") {
+    static{
+        staticBasePackage = pageLocation
+        preCompressed {
+            file("/", "index.html")
+        }
+    }
+
+    // TODO
+    get("/old") {
         val index = FreeMarkerContent("index.ftl", mapOf("posts" to posts))
         mainDataRepository.incrementViewCount("index")
         call.respond(index)
