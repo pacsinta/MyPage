@@ -13,7 +13,6 @@ import java.security.KeyStore
 
 const val HTTP_PORT = 8088
 const val HTTPS_PORT = 8087
-const val DOMAIN = "cstcompany.ddns.net"
 var ENABLE_HTTPS = true
 var LOCALHOST_ONLY = true
 var POST_REFRESH_DELAY = 1000L //* 60 * 10  // 10 minutes in milliseconds
@@ -111,6 +110,8 @@ fun main(args: Array<String>) {
         }
 
         if (ENABLE_HTTPS) {
+
+
             sslConnector(
                 keyStore = ks!!,
                 keyAlias = alias!!,
