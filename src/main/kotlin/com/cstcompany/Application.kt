@@ -10,7 +10,6 @@ import java.io.File
 import java.io.FileInputStream
 import java.security.KeyStore
 
-
 const val HTTP_PORT = 8088
 const val HTTPS_PORT = 8087
 const val DOMAIN = "cstcompany.ddns.net"
