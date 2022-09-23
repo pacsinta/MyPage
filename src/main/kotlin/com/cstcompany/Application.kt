@@ -14,7 +14,7 @@ const val HTTP_PORT = 8088
 const val HTTPS_PORT = 8087
 const val DOMAIN = "cstcompany.ddns.net"
 
-var ENABLE_HTTPS = false
+var ENABLE_HTTPS = true
 var LOCALHOST_ONLY = true
 var POST_REFRESH_DELAY = 1000L //* 60 * 10  // 10 minutes in milliseconds
 var MONGODB_CLUSTER = "cluster0.hgi0p"
@@ -99,7 +99,7 @@ fun main(args: Array<String>) {
             configureSession()
             configureJWT()
             configureRouting(posts)
-            if(ENABLE_HTTPS){
+            if (ENABLE_HTTPS) {
                 configureRedirect()
             }
             configureCompression()

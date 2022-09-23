@@ -51,17 +51,19 @@
 
     <div class="w3-content" style="max-width:700px">
         <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">HTTP IN KTOR</span></h5>
-        How can we make a request in ktor?
+        So how can we make a request in ktor?
         <p>
             In the <a href="/tutorials/ktor-1">previous tutorial</a> we created our first server with the following code:
         </p>
         <img src="/tutorial-images/ktor/2/mainFun.png" alt="hello world project" class="w3-image">
 
         <p>
-            Here we can open the  we can move our mouse to the configureRouting() and press ctrl + left click.
-            It will open the file .
+            Here we see the main function. This is the entry point for the program.
+        </p>
+        <p>
+            The only thing that is in there is an embeddedServer. It is our http server. In it's parameters we should
+            configure it's engine and it's port, hostname combination where we want it to listen.
+            Now we should only care about the port and the hostname.
         </p>
     </div>
-
-    The main
 </div>
