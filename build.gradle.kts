@@ -1,11 +1,10 @@
 val ktor_version = "2.1.1"
 val kotlin_version = "1.6.10"
-val logback_version = "1.4.0"
+val logback_version = "1.4.1"
 
 plugins {
     application
     kotlin("jvm") version "1.6.10"
-    id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
 group = "com.cstcompany"

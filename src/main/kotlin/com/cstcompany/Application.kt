@@ -14,8 +14,8 @@ const val HTTP_PORT = 8088
 const val HTTPS_PORT = 8087
 const val DOMAIN = "cstcompany.ddns.net"
 
-var ENABLE_HTTPS = false
-var LOCALHOST_ONLY = true
+var ENABLE_HTTPS = true
+var LOCALHOST_ONLY = false
 var POST_REFRESH_DELAY = 1000L //* 60 * 10  // 10 minutes in milliseconds
 var MONGODB_CLUSTER = "cluster0.hgi0p"
 var DATABASE_NAME = "MyPageTest"
@@ -23,6 +23,7 @@ const val JWT_LIFETIME = 60000  // 1 minute in milliseconds
 
 lateinit var pageLocation: String
 var images: List<String> = mutableListOf()
+
 fun main(args: Array<String>) {
     // Load the configurations from the args
     val config: MutableMap<String, String> = mutableMapOf()
