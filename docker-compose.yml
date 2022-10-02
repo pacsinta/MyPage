@@ -1,6 +1,0 @@
-services:
-  mypage:
-    build: .
-    ports:
-      - "8088:8088"
-      - "8087:8087"
