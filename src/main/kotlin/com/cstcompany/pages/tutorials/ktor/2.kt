@@ -8,5 +8,6 @@ fun Route.ktor2() {
     static("/ktor/2") {
         staticBasePackage = "$pageLocation/tutorials/ktor/2"
         resource("request.png")
+        resource("mainFun.png")
     }
 }

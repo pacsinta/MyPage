@@ -27,21 +27,43 @@
         <img src="/tutorial-images/ktor/2/request.png" alt="configure project" class="w3-image">
         <p></p>
         <b>
-            Http requests has 4 types:
+            The main HTTP requests methods are:
         </b>
         <div>
-            <p>
-                &nbsp;&nbsp; PUT - used when you want to add data to the server
-            </p>
             <p>
                 &nbsp;&nbsp; GET - used when you want to fetch data from the server
             </p>
             <p>
-                &nbsp;&nbsp; DELETE - used when you want to delete data from the server
+                &nbsp;&nbsp; POST - used when you want to add data in the server
             </p>
             <p>
-                &nbsp;&nbsp; UPDATE - used when you want to modify data in the server
+                &nbsp;&nbsp; PUT - used when you want to change the data to the server
+            </p>
+            <p>
+                &nbsp;&nbsp; DELETE - used when you want to delete data from the server
             </p>
         </div>
+        <p>
+            You can read more obout HTTP methods at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">MDN</a>
+        </p>
+    </div>
+    <br>
+
+    <div class="w3-content" style="max-width:700px">
+        <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">HTTP IN KTOR</span></h5>
+        So how can we make a request in ktor?
+        <p>
+            In the <a href="/tutorials/ktor-1">previous tutorial</a> we created our first server with the following code:
+        </p>
+        <img src="/tutorial-images/ktor/2/mainFun.png" alt="hello world project" class="w3-image">
+
+        <p>
+            Here we see the main function. This is the entry point for the program.
+        </p>
+        <p>
+            The only thing that is in there is an embeddedServer. It is our http server. In it's parameters we should
+            configure it's engine and it's port, hostname combination where we want it to listen.
+            Now we should only care about the port and the hostname.
+        </p>
     </div>
 </div>
