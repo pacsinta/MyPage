@@ -1,0 +1,20 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#posts").load("/test", function(responseTxt, statusTxt, xhr){
+                if(statusTxt === "success")
+                    console.log("External content loaded successfully!");
+                if(statusTxt === "error")
+                    console.log("Error: " + xhr.status + ": " + xhr.statusText);
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="posts">
+
+</div>
+</body>
+</html>

@@ -35,10 +35,19 @@ fun Application.configureRouting(posts: List<BlogPost>) {
             resource("google0dee9f0367abf7ae.html")
             resource("28b51a4b5486b2348815fa26b5a6262e.html")
         }
+        static{
+            resource("testIndex", "test.html")
+        }
         static("/tutorial-images") {
             ktor1()
             ktor2()
         }
+
+        get("/test"){
+            call.respondText("OK")
+        }
+
+
 
         get("/feedback") {
             if (call.request.queryParameters["Name"] != null && call.request.queryParameters["Message"] != null) {
