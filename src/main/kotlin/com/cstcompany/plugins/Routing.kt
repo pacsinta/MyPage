@@ -20,14 +20,7 @@ import io.ktor.server.routing.*
 import java.util.*
 
 fun Application.configureRouting(posts: List<BlogPost>) {
-    // Test
-    routing {
-        get("/") {
-            call.respondText("Hello World!")
-        }
-    }
-
-    /*val mainDataRepository = MainDataMongodbImpl
+    val mainDataRepository = MainDataMongodbImpl
 
     routing {
         staticBasePackage = pageLocation
@@ -84,5 +77,5 @@ fun Application.configureRouting(posts: List<BlogPost>) {
         imageShow()
         karinavers1()
         index(posts)
-    }*/
+    }
 }

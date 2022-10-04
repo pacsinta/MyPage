@@ -8,4 +8,4 @@ COPY kmongoConfig /app/kmongoConfig
 COPY jwtConfig /app/jwtConfig
 COPY build/ /app/build/
 COPY src/main/resources/ /app/resources
-CMD cd /app && bash build/install/MyPage/bin/MyPage localhost=0 https=1 database_name=MyPage
+CMD cd /app && bash build/install/MyPage/bin/MyPage localhost=0 https=0 database_name=MyPage
