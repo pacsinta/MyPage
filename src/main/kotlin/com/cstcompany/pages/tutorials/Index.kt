@@ -27,11 +27,19 @@ fun Route.index(posts: List<BlogPost>) {
         }
     }*/
 
-    // TODO change to jqeury from ftl
-    get("/") {
+    suspend fun serveIndex(call: ApplicationCall){
         val index = FreeMarkerContent("index.ftl", mapOf("posts" to posts))
         mainDataRepository.incrementViewCount("index")
         call.respond(index)
+    }
+
+    // TODO change to jqeury from ftl
+    get("/") {
+        serveIndex(call)
+    }
+
+    get("/index"){
+        serveIndex(call)
     }
 
     get("/tutorials/{name}") {
