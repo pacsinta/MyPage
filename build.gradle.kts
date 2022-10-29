@@ -39,7 +39,7 @@ dependencies {
     implementation("io.ktor:ktor-server-http-redirect:$ktor_version")
 
     //KMongo
-    implementation("org.litote.kmongo:kmongo:4.7.1")
+    implementation("org.litote.kmongo:kmongo:4.7.2")
 
     //Compression
     implementation("io.ktor:ktor-server-compression:$ktor_version")
