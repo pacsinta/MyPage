@@ -9,7 +9,7 @@ import java.security.KeyStore
 
 const val HTTP_PORT = 8088
 const val HTTPS_PORT = 8087
-const val DOMAIN = "cstcompany.ddns.net"
+const val DOMAIN = "itlove.eu"
 var ENABLE_HTTPS = false
 var LOCALHOST_ONLY = true
 var POST_REFRESH_DELAY = 1000L //* 60 * 10  // 10 minutes in milliseconds
