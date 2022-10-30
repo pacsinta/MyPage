@@ -77,3 +77,4 @@ pwd
 keystore.jks
 /kmongoConfig
 /jwtConfig
+.idea/jsLibraryMappings.xml
