@@ -20,12 +20,10 @@ fun Route.index(posts: List<BlogPost>) {
         }
     }
 
-    /*static{
+    static{
         staticBasePackage = pageLocation
-        preCompressed {
-            file("/", "index.html")
-        }
-    }*/
+        resource("/", "index.html")
+    }
 
     suspend fun serveIndex(call: ApplicationCall){
         val index = FreeMarkerContent("index.ftl", mapOf("posts" to posts))
@@ -34,7 +32,7 @@ fun Route.index(posts: List<BlogPost>) {
     }
 
     // TODO change to jqeury from ftl
-    get("/") {
+    get("/old") {
         serveIndex(call)
     }
 
