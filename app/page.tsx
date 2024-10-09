@@ -17,7 +17,7 @@ export default function Home() {
             <h6 className="font-medium text-gray-600 text-lg md:text-2xl uppercase mb-8">Patrik Csikós</h6>
             <h1 className="font-normal text-gray-900 text-4xl md:text-7xl leading-none mb-8">Junior Developer</h1>
             <p className="font-normal text-gray-600 text-md md:text-xl mb-16">I have a passion for software. I enjoy creating tools that make life easier for people.</p>
-            <a href="#" className="px-7 py-3 md:px-9 md:py-4 font-medium md:font-semibold bg-gray-700 text-gray-50 text-sm rounded-md hover:bg-gray-50 hover:text-gray-700 transition ease-linear duration-500">Hire me</a>
+            <a href="#" className="px-7 py-3 md:px-9 md:py-4 font-medium md:font-semibold bg-gray-700 text-gray-50 text-sm rounded-md hover:bg-gray-50 hover:text-gray-700 transition ease-linear duration-500">Notify me</a>
           </div>
         </div>
       </section>
@@ -73,9 +73,11 @@ export default function Home() {
                 <span className="w-28 h-0.5 bg-gray-300 mt-5"></span>
 
                 <div>
-                  <h1 className="font-normal text-gray-700 text-3xl md:text-4xl mb-5">Demo API Generator</h1>
+                  <a href="https://github.com/pacsinta/signatureTester" className="font-normal text-gray-700 text-3xl md:text-4xl mb-5">Signiture tester</a>
 
-                  <p className="font-normal text-gray-500 text-sm md:text-base">A dummy data free and documented API generator to facilitate <br /> the process of testing the front-end portion of projects.</p>
+                  <p className="font-normal text-gray-500 text-sm md:text-base">
+                    This software can validate hand written signitures. <br /> 
+                    It uses a recurrent neural network to compare the signitures.  </p>
                 </div>
               </div>
 
@@ -97,9 +99,9 @@ export default function Home() {
                 <span className="w-28 h-0.5 bg-gray-300 mt-5"></span>
 
                 <div>
-                  <h1 className="font-normal text-gray-700 text-3xl md:text-4xl mb-5">Demo API Generator</h1>
+                  <a href="https://github.com/pacsinta/WebHookUpdates" className="font-normal text-gray-700 text-3xl md:text-4xl mb-5">Webhook updates</a>
 
-                  <p className="font-normal text-gray-500 text-sm md:text-base">A dummy data free and documented API generator to facilitate <br /> the process of testing the front-end portion of projects.</p>
+                  <p className="font-normal text-gray-500 text-sm md:text-base">This software contains a </p>
                 </div>
               </div>
             </div>
