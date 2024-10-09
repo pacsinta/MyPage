@@ -1,5 +1,0 @@
-not ready
-Ktor basics
-Ktor tutorial 2
-The basics of Ktor
-ktor-2

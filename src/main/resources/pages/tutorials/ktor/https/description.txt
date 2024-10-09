@@ -1,5 +1,0 @@
-not ready
-Https in Ktor
-Everything about Ktor
-How to serv https requests in Ktor
-ktor-https
