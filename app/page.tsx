@@ -27,16 +27,19 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-gray-50 px-8 py-10 rounded-md">
               <div className="w-20 py-6 flex justify-center bg-gray-100 rounded-md mb-4">
-                <i data-feather="activity"></i>
+                <i data-feather="heart"></i>
               </div>
-              <h4 className="font-medium text-gray-700 text-lg mb-4">High experience</h4>
-              <p className="font-normal text-gray-500 text-md">Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit, sed do eiusmod tempor <br /> incididunt ut labore et dolore magna aliqua.</p>
+              <h4 className="font-medium text-gray-700 text-lg mb-4">High motivation</h4>
+              <p className="font-normal text-gray-500 text-md">
+                I always admired the complexity of the<br /> 
+                computer science <br /> 
+                incididunt ut labore et dolore magna aliqua.</p>
             </div>
             <div className="bg-gray-50 px-8 py-10 rounded-md">
               <div className="w-20 py-6 flex justify-center bg-gray-100 rounded-md mb-4">
-                <i data-feather="codesandbox"></i>
+                <i data-feather="book"></i>
               </div>
-              <h4 className="font-medium text-gray-700 text-lg mb-4">Useful sandboxes</h4>
+              <h4 className="font-medium text-gray-700 text-lg mb-4">Lifelong learning</h4>
               <p className="font-normal text-gray-500 text-md">Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit, sed do eiusmod tempor <br /> incididunt ut labore et dolore magna aliqua.</p>
             </div>
 
@@ -45,8 +48,7 @@ export default function Home() {
                 <i data-feather="coffee"></i>
               </div>
 
-              <h4 className="font-medium text-gray-700 text-lg mb-4">Success side projects</h4>
-
+              <h4 className="font-medium text-gray-700 text-lg mb-4">Enjoyable side projects</h4>
               <p className="font-normal text-gray-500 text-md">Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit, sed do eiusmod tempor <br /> incididunt ut labore et dolore magna aliqua.</p>
             </div>
           </div>
@@ -87,9 +89,11 @@ export default function Home() {
                 <span className="w-28 h-0.5 bg-gray-300 mt-5"></span>
 
                 <div>
-                  <h1 className="font-normal text-gray-700 text-3xl md:text-4xl mb-5">Demo API Generator</h1>
+                  <h1 className="font-normal text-gray-700 text-3xl md:text-4xl mb-5">Parking visualization</h1>
 
-                  <p className="font-normal text-gray-500 text-sm md:text-base">A dummy data free and documented API generator to facilitate <br /> the process of testing the front-end portion of projects.</p>
+                  <p className="font-normal text-gray-500 text-sm md:text-base">
+                    I was working in a project to develop a parking software for automotives. <br /> 
+                    We were working on a SW capable 360<sup>o</sup> visualization around the car. </p>
                 </div>
               </div>
 
@@ -101,7 +105,7 @@ export default function Home() {
                 <div>
                   <a href="https://github.com/pacsinta/WebHookUpdates" className="font-normal text-gray-700 text-3xl md:text-4xl mb-5">Webhook updates</a>
 
-                  <p className="font-normal text-gray-500 text-sm md:text-base">This software contains a </p>
+                  <p className="font-normal text-gray-500 text-sm md:text-base">I created a  </p>
                 </div>
               </div>
             </div>
