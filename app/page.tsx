@@ -180,44 +180,17 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row justify-between">
             <div className="space-y-8 md:space-y-16 mb-16 md:mb-0">
               <h6 className="font-medium text-gray-400 text-base uppercase">Company</h6>
-
-              <p className="font-semibold text-gray-600 text-base">Massa Fames <span className="font-normal text-gray-300">/ New York</span></p>
-
-              <p className="font-semibold text-gray-600 text-base">Massa Fames <span className="font-normal text-gray-300">/ New York</span></p>
-
-              <p className="font-semibold text-gray-600 text-base">Massa Fames <span className="font-normal text-gray-300">/ New York</span></p>
-
-              <p className="font-semibold text-gray-600 text-base">Massa Fames <span className="font-normal text-gray-300">/ New York</span></p>
-
-              <p className="font-semibold text-gray-600 text-base">Massa Fames <span className="font-normal text-gray-300">/ New York</span></p>
+              <p className="font-semibold text-gray-600 text-base">Robert Bosch <span className="font-normal text-gray-300">/ Budapest</span></p>
             </div>
 
             <div className="space-y-8 md:space-y-16 mb-16 md:mb-0">
               <h6 className="font-medium text-gray-400 text-base uppercase">Position</h6>
-
-              <p className="font-normal text-gray-400 text-base">Junior Front-End Developer</p>
-
-              <p className="font-normal text-gray-400 text-base">Junior Front-End Developer</p>
-
-              <p className="font-normal text-gray-400 text-base">Junior Front-End Developer</p>
-
-              <p className="font-normal text-gray-400 text-base">Junior Front-End Developer</p>
-
-              <p className="font-normal text-gray-400 text-base">Junior Front-End Developer</p>
+              <p className="font-normal text-gray-400 text-base">Junior embedded Developer</p>
             </div>
 
             <div className="space-y-8 md:space-y-16">
               <h6 className="font-medium text-gray-400 text-base uppercase">Year</h6>
-
-              <p className="font-normal text-gray-400 text-base">2016</p>
-
-              <p className="font-normal text-gray-400 text-base">2016</p>
-
-              <p className="font-normal text-gray-400 text-base">2016</p>
-
-              <p className="font-normal text-gray-400 text-base">2016</p>
-
-              <p className="font-normal text-gray-400 text-base">2016</p>
+              <p className="font-normal text-gray-400 text-base">2023</p>
             </div>
           </div>
 
