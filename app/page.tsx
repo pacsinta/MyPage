@@ -1,4 +1,3 @@
-import { log } from "console";
 import EmailWriter from "./emailwriter";
 import SocialLinks from "./sociallinks";
 
@@ -129,7 +128,7 @@ export default function Home({ searchParams }: SearchParamProps) {
 
                   <p className="font-normal text-gray-500 text-sm md:text-base">
                     This is a multiplayer game, where each player can control a monster. <br/>
-                    The goal is to successfuly hit the ball to the other player's field.
+                    The goal is to successfuly hit the ball to the other player&apos;s field.
                     </p>
                 </div>
               </div>
@@ -214,13 +213,13 @@ export default function Home({ searchParams }: SearchParamProps) {
           <div className="text-center">
             <h1 className="font-medium text-gray-700 text-4xl md:text-5xl mb-5">About myself</h1>
             <p className="font-normal text-md md:text-lg mb-5"> 
-              I'm currently working on my Master's degree at the Budapest University of Technology and Economics. <br/>
+              I&apos;m currently working on my Master&apos;s degree at the Budapest University of Technology and Economics. <br/>
               However, I started programming as a kid. Initially, I learned from my dad in Excel Visual Basic. <br/>
               Shortly after that, I was learning how to build robots on the Lego Mindstorms platform. <br/>
               From this point, I was pulled into the amazing world of programming, and I started learning more complex concepts. <br />
               I have a big passion for creating things that help people with the boring stuff to enjoy their lives more.</p>
             <p className="font-normal text-gray-400 text-md md:text-lg mb-20">
-              Work as hard as you can and as good as you can, but don't forget to enjoy your life </p>
+              Work as hard as you can and as good as you can, but don&apos;t forget to enjoy your life </p>
 
             <SocialLinks />
           </div>
