@@ -20,7 +20,7 @@ export default function EmailWriter() {
             (button as HTMLButtonElement).textContent = 'Sending...';
         }
 
-        var res = await sendEmail({ email: email, subject: subject, emailBody: emailBody });
+        const res = await sendEmail({ email: email, subject: subject, emailBody: emailBody });
 
         if (button) {
             (button as HTMLButtonElement).disabled = false;

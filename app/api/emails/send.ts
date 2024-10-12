@@ -5,7 +5,7 @@ interface Values {
 }
 
 export const sendEmail = async (values: Values) => {
-    var success = true;
+    let success = true;
     try {
         const responseMe = await fetch('/api/sendtome', {
             method: 'POST',
