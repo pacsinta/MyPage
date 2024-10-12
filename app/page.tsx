@@ -34,7 +34,7 @@ export default function Home() {
               </div>
               <h4 className="font-medium text-gray-700 text-lg mb-4">High motivation</h4>
               <p className="font-normal text-gray-500 text-md">
-                I have deep passion for technology and its <br /> 
+                I have a deep passion for technology and its <br /> 
                 transformative potential. It can make life more <br />
                 enjoyable. I believe it defines the future. </p>
             </div>
@@ -58,8 +58,8 @@ export default function Home() {
               <h4 className="font-medium text-gray-700 text-lg mb-4">Enjoyable side projects</h4>
               <p className="font-normal text-gray-500 text-md">
                 I believe the best way to stay sharp in IT <br /> 
-                is to always work on something from heart. <br /> 
-                It motivates, gives fun challanges and creates <br />
+                is to always work on something from the heart. <br /> 
+                It motivates, gives challenges and creates <br />
                 useful skills in the process. </p>
             </div>
           </div>
@@ -87,12 +87,12 @@ export default function Home() {
 
                 <div>
                   <a href="https://github.com/pacsinta/signatureTester" className="font-normal text-gray-700 text-3xl md:text-4xl mb-5">
-                    <h1 className="font-normal text-gray-700 text-3xl md:text-4xl mb-5">Signiture tester</h1>
+                    <h1 className="font-normal text-gray-700 text-3xl md:text-4xl mb-5">Signature tester</h1>
                   </a>
 
                   <p className="font-normal text-gray-500 text-sm md:text-base">
-                    This software can validate hand written signitures. <br /> 
-                    It uses a recurrent neural network to compare the signitures.  </p>
+                    This software can validate handwritten signitures. <br /> 
+                    It uses a recurrent neural network to compare the signatures.  </p>
                 </div>
               </div>
 
@@ -105,7 +105,7 @@ export default function Home() {
                   <h1 className="font-normal text-gray-700 text-3xl md:text-4xl mb-5">Parking visualization</h1>
 
                   <p className="font-normal text-gray-500 text-sm md:text-base">
-                    I was working in a project to develop a parking software for automotives. <br /> 
+                    I was working on a project to develop parking software for automotives. <br /> 
                     We were working on a SW capable 360<sup>o</sup> visualization around the car. </p>
                 </div>
               </div>
@@ -121,8 +121,8 @@ export default function Home() {
                   </a>
 
                   <p className="font-normal text-gray-500 text-sm md:text-base">
-                    This is a multiplayer game, where each player can control a monster. <br/>
-                    The goal is to successfuly hit the ball to the other player&apos;s field.
+                    This is a multiplayer game where each player can control a monster. <br/>
+                    The goal is to successfully hit the ball to the other player&apos;s field.
                     </p>
                 </div>
               </div>
@@ -143,8 +143,8 @@ export default function Home() {
               <h3 className="font-medium text-black text-lg mb-1">Szent István High School</h3>
               <h4 className="font-medium text-gray-700 text-lg mb-4">2016 – 2020</h4>
               <p className="font-normal text-gray-500 text-md mb-4">
-                I learned the basic&apos;s here. I had the <br />
-                opportunity learn robotics with the Lego <br />
+                I learned the basics here. I had the <br />
+                opportunity to learn robotics with the Lego <br />
                 Mindstorms / Arduino platforms and programming in C#. </p>
               <div className="relative">
                 <a href="https://szigbp.hu/" className="font-semibold text-gray-500 text-md relative z-10">See the place here</a>
@@ -172,8 +172,8 @@ export default function Home() {
               <p className="font-normal text-gray-500 text-md mb-4">
                 I&apos;m currently doing my Master&apos;s degree here. <br />
                 It is the continuation of the Bachler&apos;s course.  <br />
-                I hope I&apos;ll extend my knowlege with more useful <br />
-                SW architechures and skills. </p>
+                I hope I&apos;ll extend my knowledge with more useful <br />
+                SW architecture and skills. </p>
               <div className="relative">
                 <a href="https://www.vik.bme.hu/en/welcome-to-bme-vik/" className="font-semibold text-gray-500 text-md relative z-10">See the place here</a>
                 <span className="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
@@ -221,7 +221,7 @@ export default function Home() {
               I&apos;m currently working on my Master&apos;s degree at the Budapest University of Technology and Economics. <br/>
               However, I started programming as a kid. Initially, I learned from my dad in Excel Visual Basic. <br/>
               Shortly after that, I was learning how to build robots on the Lego Mindstorms platform. <br/>
-              From this point, I was pulled into the amazing world of programming, and I started learning more complex concepts. <br />
+              From this point on, programming drew me in and I began learning more complex concepts. <br />
               I have a big passion for creating things that help people with the boring stuff to enjoy their lives more.</p>
             <p className="font-normal text-gray-400 text-md md:text-lg mb-20">
               Work as hard as you can and as good as you can, but don&apos;t forget to enjoy your life </p>
