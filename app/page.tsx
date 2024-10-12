@@ -198,7 +198,7 @@ export default function Home() {
 
             <div className="space-y-8 md:space-y-16 mb-16 md:mb-0">
               <h6 className="font-medium text-gray-400 text-base uppercase">Position</h6>
-              <p className="font-normal text-gray-400 text-base">Junior embedded Developer</p>
+              <p className="font-normal text-gray-400 text-base">Junior embedded developer</p>
             </div>
 
             <div className="space-y-8 md:space-y-16">

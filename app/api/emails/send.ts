@@ -5,6 +5,7 @@ interface Values {
 }
 
 export const sendEmail = async (values: Values) => {
+    var success = true;
     try {
         const responseMe = await fetch('/api/sendtome', {
             method: 'POST',
@@ -19,6 +20,7 @@ export const sendEmail = async (values: Values) => {
         } else {
             const errorDetails = await responseMe.json();
             console.error('Error sending email:', errorDetails.message);
+            success = false;
         }
 
 
@@ -35,8 +37,12 @@ export const sendEmail = async (values: Values) => {
         } else {
             const errorDetails = await responseSender.json();
             console.error('Error sending email:', errorDetails.message);
+            success = false;
         }
     } catch (error) {
         console.error('There was a problem sending the email:', error);
+        success = false;
     }
+
+    return success;
 };

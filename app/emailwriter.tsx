@@ -2,6 +2,7 @@
 
 import { sendEmail } from "./api/emails/send";
 import { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function EmailWriter() {
     const [showModal, setShowModal] = useState(false);
@@ -10,10 +11,28 @@ export default function EmailWriter() {
     const [subject, setSubject] = useState('');
     const [emailBody, setBody] = useState('');
 
-    const handleSubmit = (event: React.FormEvent) => {
+    const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
-        sendEmail({ email: email, subject: subject, emailBody: emailBody });
+
+        const button = document.querySelector('button[type="submit"]');
+        if (button) {
+            (button as HTMLButtonElement).disabled = true;
+            (button as HTMLButtonElement).textContent = 'Sending...';
+        }
+
+        var res = await sendEmail({ email: email, subject: subject, emailBody: emailBody });
+
+        if (button) {
+            (button as HTMLButtonElement).disabled = false;
+            (button as HTMLButtonElement).textContent = 'Send';
+        }
         setShowModal(false);
+        if(res) {
+            toast.success('Email sent successfully!');
+        }
+        else {
+            toast.error('Something went wrong during sending!');
+        }
     };
 
     const modal = showModal ? (
@@ -97,6 +116,7 @@ export default function EmailWriter() {
 
     return (
         <div>
+            <Toaster position="top-center" />
             <button 
                 className="px-7 py-3 md:px-9 md:py-4 font-medium md:font-semibold bg-gray-700 text-gray-50 text-sm rounded-md hover:bg-gray-50 hover:text-gray-700 transition ease-linear duration-500"
                 onClick={() => setShowModal(true)}>
