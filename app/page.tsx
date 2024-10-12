@@ -1,5 +1,6 @@
 import EmailWriter from "./emailwriter";
 import SocialLinks from "./sociallinks";
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -8,13 +9,13 @@ export default function Home() {
       <section className="py-10 md:py-16">
         <div className="container max-w-screen-xl mx-auto px-4">
           <nav className="flex items-center justify-between mb-40">
-            <img src="icon2.jpg" alt="Logo" className="w-10 h-10" />
+            <Image src="icon2.jpg" alt="Logo" className="w-10 h-10" />
             <a href="/patrik_csikos-cv.pdf" download className="px-7 py-3 md:px-9 md:py-4 bg-white font-medium md:font-semibold text-gray-700 text-md rounded-md hover:bg-gray-700 hover:text-white transition ease-linear duration-500">Get my CV</a>
           </nav>
 
           <div className="text-center">
             <div className="flex justify-center mb-16">
-              <img src="/profile1.png" alt="Image" />
+              <Image src="/profile1.png" alt="Image" />
             </div>
             <h6 className="font-medium text-gray-600 text-lg md:text-2xl uppercase mb-8">Patrik Csikós</h6>
             <h1 className="font-normal text-gray-900 text-4xl md:text-7xl leading-none mb-8">Junior Developer</h1>
@@ -141,7 +142,10 @@ export default function Home() {
             <div className="bg-gray-50 px-8 py-10 rounded-md">
               <h3 className="font-medium text-black text-lg mb-1">Szent István High School</h3>
               <h4 className="font-medium text-gray-700 text-lg mb-4">2016 – 2020</h4>
-              <p className="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit, sed do eiusmod tempor <br /> incididunt ut labore et dolore magna aliqua.</p>
+              <p className="font-normal text-gray-500 text-md mb-4">
+                I learned the basic&apos;s here. I had the <br />
+                opportunity learn robotics with the Lego <br />
+                Mindstorms / Arduino platforms and programming in C#. </p>
               <div className="relative">
                 <a href="https://szigbp.hu/" className="font-semibold text-gray-500 text-md relative z-10">See the place here</a>
                 <span className="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
@@ -151,7 +155,11 @@ export default function Home() {
             <div className="bg-gray-50 px-8 py-10 rounded-md">
               <h3 className="font-medium text-black text-lg mb-1">Budapest University of Technology and Economics</h3>
               <h4 className="font-medium text-gray-700 text-lg mb-4">2020 – 2024</h4>
-              <p className="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit, sed do eiusmod tempor <br /> incididunt ut labore et dolore magna aliqua.</p>
+              <p className="font-normal text-gray-500 text-md mb-4">
+                This was the place where I started to <br /> 
+                understand the main concepts behind <br />
+                computers and programming. This is where <br />
+                 I created my first serious projects. </p>
               <div className="relative">
                 <a href="https://www.vik.bme.hu/en/welcome-to-bme-vik/" className="font-semibold text-gray-500 text-md relative z-10">See the place here</a>
                 <span className="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
@@ -163,8 +171,9 @@ export default function Home() {
               <h4 className="font-medium text-gray-700 text-lg mb-4">2024 – (2026)</h4>
               <p className="font-normal text-gray-500 text-md mb-4">
                 I&apos;m currently doing my Master&apos;s degree here. <br />
-                adipiscing elit, sed do eiusmod tempor <br /> 
-                incididunt ut labore et dolore magna aliqua.</p>
+                It is the continuation of the Bachler&apos;s course.  <br />
+                I hope I&apos;ll extend my knowlege with more useful <br />
+                SW architechures and skills. </p>
               <div className="relative">
                 <a href="https://www.vik.bme.hu/en/welcome-to-bme-vik/" className="font-semibold text-gray-500 text-md relative z-10">See the place here</a>
                 <span className="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
