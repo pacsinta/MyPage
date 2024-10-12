@@ -9,13 +9,13 @@ export default function Home() {
       <section className="py-10 md:py-16">
         <div className="container max-w-screen-xl mx-auto px-4">
           <nav className="flex items-center justify-between mb-40">
-            <Image src="icon2.jpg" alt="Logo" className="w-10 h-10" />
+            <Image src="/icon2.jpg" alt="Logo" className="w-10 h-10" width={40} height={40} />
             <a href="/patrik_csikos-cv.pdf" download className="px-7 py-3 md:px-9 md:py-4 bg-white font-medium md:font-semibold text-gray-700 text-md rounded-md hover:bg-gray-700 hover:text-white transition ease-linear duration-500">Get my CV</a>
           </nav>
 
           <div className="text-center">
             <div className="flex justify-center mb-16">
-              <Image src="/profile1.png" alt="Image" />
+              <Image src="/profile1.png" alt="Image" width={360} height={360} />
             </div>
             <h6 className="font-medium text-gray-600 text-lg md:text-2xl uppercase mb-8">Patrik Csikós</h6>
             <h1 className="font-normal text-gray-900 text-4xl md:text-7xl leading-none mb-8">Junior Developer</h1>
