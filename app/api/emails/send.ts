@@ -6,7 +6,7 @@ interface Values {
 
 export const sendEmail = async (values: Values) => {
     try {
-        const response = await fetch('/api/send', {
+        const responseMe = await fetch('/api/sendtome', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -14,10 +14,26 @@ export const sendEmail = async (values: Values) => {
             body: JSON.stringify(values),
         });
 
-        if (response.ok) {
+        if (responseMe.ok) {
             console.log('Email sent successfully!');
         } else {
-            const errorDetails = await response.json();
+            const errorDetails = await responseMe.json();
+            console.error('Error sending email:', errorDetails.message);
+        }
+
+
+        const responseSender = await fetch('/api/sendtosender', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(values),
+        });
+
+        if (responseSender.ok) {
+            console.log('Email sent successfully!');
+        } else {
+            const errorDetails = await responseSender.json();
             console.error('Error sending email:', errorDetails.message);
         }
     } catch (error) {

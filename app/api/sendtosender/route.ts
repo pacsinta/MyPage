@@ -1,6 +1,6 @@
 import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
-import { EmailTemplate } from '@/app/components /Email-template';
+import { EmailConfirmationTemplate } from '@/app/components /Email-template';
 
 const resend = new Resend(process.env.RESEND_TOKEN);
 
@@ -14,10 +14,10 @@ export async function POST(req: NextRequest) {
         const { email, subject, emailBody } = body;
 
         const response = await resend.emails.send({
-            to: 'patrik.csikos@proton.me',
-            from: 'Acme <onboarding@resend.dev>',
-            subject: subject,
-            react: EmailTemplate({ email, emailBody }),
+            to: email,
+            from: 'patrik.csikos@workhard.coffee',
+            subject: "Verification of: " + subject,
+            react: EmailConfirmationTemplate({ email, emailBody }),
         });
 
         return NextResponse.json({ message: 'Email sent', response }, { status: 200 });

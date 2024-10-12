@@ -16,3 +16,19 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = (
         </p>
     </div>
 );
+
+export const EmailConfirmationTemplate: React.FC<Readonly<EmailTemplateProps>> = (
+    {
+        email,
+        emailBody,
+    }
+) => (
+    <div>
+        <h4>Thank you for connecting with me!</h4>
+
+        <h5>Your message:</h5>
+        <p>
+            {emailBody}
+        </p>
+    </div>
+);

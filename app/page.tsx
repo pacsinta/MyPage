@@ -1,16 +1,9 @@
 import EmailWriter from "./emailwriter";
 import SocialLinks from "./sociallinks";
 
-type SearchParamProps = {
-  searchParams: Record<string, string> | null | undefined;
-};
-
-export default function Home({ searchParams }: SearchParamProps) {
-  const show = searchParams?.show;
-
+export default function Home() {
   return (
     <div>
-      {show ? <EmailWriter /> : null}
 
       <section className="py-10 md:py-16">
         <div className="container max-w-screen-xl mx-auto px-4">
@@ -26,7 +19,7 @@ export default function Home({ searchParams }: SearchParamProps) {
             <h6 className="font-medium text-gray-600 text-lg md:text-2xl uppercase mb-8">Patrik Csikós</h6>
             <h1 className="font-normal text-gray-900 text-4xl md:text-7xl leading-none mb-8">Junior Developer</h1>
             <p className="font-normal text-gray-600 text-md md:text-xl mb-16">I have a passion for software. I enjoy creating tools that make life easier for people.</p>
-            <a href="/?show=true" className="px-7 py-3 md:px-9 md:py-4 font-medium md:font-semibold bg-gray-700 text-gray-50 text-sm rounded-md hover:bg-gray-50 hover:text-gray-700 transition ease-linear duration-500">Notify me</a>
+            <EmailWriter />
           </div>
         </div>
       </section>
@@ -168,7 +161,10 @@ export default function Home({ searchParams }: SearchParamProps) {
             <div className="bg-gray-50 px-8 py-10 rounded-md">
               <h3 className="font-medium text-black text-lg mb-1">Budapest University of Technology and Economics</h3>
               <h4 className="font-medium text-gray-700 text-lg mb-4">2024 – (2026)</h4>
-              <p className="font-normal text-gray-500 text-md mb-4">Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit, sed do eiusmod tempor <br /> incididunt ut labore et dolore magna aliqua.</p>
+              <p className="font-normal text-gray-500 text-md mb-4">
+                I'm currently doing my Masters degree here. <br /> 
+                adipiscing elit, sed do eiusmod tempor <br /> 
+                incididunt ut labore et dolore magna aliqua.</p>
               <div className="relative">
                 <a href="https://www.vik.bme.hu/en/welcome-to-bme-vik/" className="font-semibold text-gray-500 text-md relative z-10">See the place here</a>
                 <span className="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
