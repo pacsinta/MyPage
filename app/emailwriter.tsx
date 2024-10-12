@@ -19,8 +19,14 @@ export default function EmailWriter() {
     const modal = showModal ? (
         <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full flex items-center justify-center z-20">
             <div className="p-8 border w-96 shadow-lg rounded-md bg-white">
+                <div className="space-y-4">
+                    <div>
+                        <h3 className="text-2xl font-bold text-gray-900">Call me:</h3>
+                        <h3 className="text-xl font-bold text-gray-700">+36 70 4180883</h3>
+                    </div>
+                </div>
                 <div className="text-center">
-                    <h3 className="text-2xl font-bold text-gray-900">Write me an email</h3>
+                    <h3 className="text-2xl font-bold text-gray-900 mt-5">Or write me a message:</h3>
                     <div className="mt-2 px-7 py-3">
                         <form className="mt-4" onSubmit={handleSubmit}>
                             <div className="mb-4">
