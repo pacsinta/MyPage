@@ -162,7 +162,7 @@ export default function Home() {
               <h3 className="font-medium text-black text-lg mb-1">Budapest University of Technology and Economics</h3>
               <h4 className="font-medium text-gray-700 text-lg mb-4">2024 – (2026)</h4>
               <p className="font-normal text-gray-500 text-md mb-4">
-                I'm currently doing my Masters degree here. <br /> 
+                I&apos;m currently doing my Master&apos;s degree here. <br />
                 adipiscing elit, sed do eiusmod tempor <br /> 
                 incididunt ut labore et dolore magna aliqua.</p>
               <div className="relative">

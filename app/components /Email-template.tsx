@@ -19,7 +19,6 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = (
 
 export const EmailConfirmationTemplate: React.FC<Readonly<EmailTemplateProps>> = (
     {
-        email,
         emailBody,
     }
 ) => (
