@@ -28,6 +28,9 @@ export default function EmailWriter() {
         }
         setShowModal(false);
         if(res) {
+            setEmail('');
+            setSubject('');
+            setBody('');
             toast.success('Email sent successfully!');
         }
         else {
