@@ -9,7 +9,7 @@ export default function Home() {
       <section className="py-10 md:py-16">
         <div className="container max-w-screen-xl mx-auto px-4">
           <nav className="flex items-center justify-between mb-40">
-            <Image src="/icon2.jpg" alt="Logo" className="w-10 h-10" width={40} height={40} />
+            <a href="https://github.com/pacsinta/MyPage"><Image src="/icon2.jpg" alt="Logo" className="w-10 h-10" width={40} height={40} /></a>
             <a href="/patrik_csikos-cv-eng.pdf" download className="px-7 py-3 md:px-9 md:py-4 bg-white font-medium md:font-semibold text-gray-700 text-md rounded-md hover:bg-gray-700 hover:text-white transition ease-linear duration-500">Get my CV</a>
           </nav>
 
