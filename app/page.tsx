@@ -173,7 +173,7 @@ export default function Home() {
                 I&apos;m currently doing my Master&apos;s degree here. <br />
                 It is the continuation of Bachler&apos;s course.  <br />
                 I hope I&apos;ll extend my knowledge with more <br />
-                useful SW architecture and skills. </p>
+                useful SW architectures and skills. </p>
               <div className="relative">
                 <a href="https://www.vik.bme.hu/en/welcome-to-bme-vik/" className="font-semibold text-gray-500 text-md relative z-10">See the place here</a>
                 <span className="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
