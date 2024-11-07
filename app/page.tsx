@@ -18,7 +18,7 @@ export default function Home() {
               <Image src="/profile1.png" alt="Image" width={360} height={360} />
             </div>
             <h6 className="font-medium text-gray-600 text-lg md:text-2xl uppercase mb-8">Patrik Csikós</h6>
-            <h1 className="font-normal text-gray-900 text-4xl md:text-7xl leading-none mb-8">Junior Developer</h1>
+            <h1 className="font-normal text-gray-900 text-4xl md:text-7xl leading-none mb-8">Software Developer</h1>
             <p className="font-normal text-gray-600 text-md md:text-xl mb-16">I have a passion for software. I enjoy creating tools that make life easier for people.</p>
             <EmailWriter />
           </div>
