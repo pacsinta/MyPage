@@ -139,7 +139,7 @@ export default function Home() {
 
                   <p className="font-normal text-gray-500 text-sm md:text-base">
                     I created this mobile app to try out text recognition on Android. <br />
-                    The goal in this app is to find a "Hello World" text with the camera in the real world. <br />
+                    The goal in this app is to find a &quot;Hello World&quot; text with the camera in the real world. <br />
                     If you find it, there is a reward for you.
                   </p>
                 </div>
