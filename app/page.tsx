@@ -126,6 +126,24 @@ export default function Home() {
                     </p>
                 </div>
               </div>
+
+              <div className="flex space-x-6">
+                <h1 className="font-normal text-gray-700 text-3xl md:text-4xl">03</h1>
+
+                <span className="w-28 h-0.5 bg-gray-300 mt-5"></span>
+
+                <div>
+                  <a href="https://play.google.com/store/apps/details?id=hu.bme.aut.android.mlkitproject">
+                    <h1 className="font-normal text-gray-700 text-3xl md:text-4xl mb-5">Can you find it</h1>
+                  </a>
+
+                  <p className="font-normal text-gray-500 text-sm md:text-base">
+                    I created this mobile app to try out text recognition on Android. <br />
+                    The goal in this app is to find a "Hello World" text with the camera in the real world. <br />
+                    If you find it, there is a reward for you.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
