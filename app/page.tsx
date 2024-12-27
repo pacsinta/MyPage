@@ -189,7 +189,7 @@ export default function Home() {
               <h4 className="font-medium text-gray-700 text-lg mb-4">2024 – (2026)</h4>
               <p className="font-normal text-gray-500 text-md mb-4">
                 I&apos;m currently doing my Master&apos;s degree here. <br />
-                It is the continuation of Bachler&apos;s course.  <br />
+                It is the continuation of the Bachler&apos;s course.  <br />
                 I hope I&apos;ll extend my knowledge with more <br />
                 useful SW architectures and skills. </p>
               <div className="relative">
@@ -221,7 +221,7 @@ export default function Home() {
 
             <div className="space-y-8 md:space-y-16">
               <h6 className="font-medium text-gray-400 text-base uppercase">Year</h6>
-              <p className="font-normal text-gray-400 text-base">2023</p>
+              <p className="font-normal text-gray-400 text-base">2022</p>
             </div>
           </div>
 
@@ -238,7 +238,7 @@ export default function Home() {
             <p className="font-normal text-md md:text-lg mb-5"> 
               I&apos;m currently working on my Master&apos;s degree at the Budapest University of Technology and Economics. <br/>
               However, I started programming as a kid. Initially, I learned from my dad in Excel Visual Basic. <br/>
-              Shortly after that, I was learning how to build robots on the Lego Mindstorms platform. <br/>
+              Shortly after that, I learned how to build robots on the Lego Mindstorms platform. <br/>
               From this point on, programming drew me in and I began learning more complex concepts. <br />
               I have a big passion for creating things that help people with the boring stuff to enjoy their lives more.</p>
             <p className="font-normal text-gray-400 text-md md:text-lg mb-20">
