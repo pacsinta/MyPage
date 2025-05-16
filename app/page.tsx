@@ -1,3 +1,6 @@
+import Education from "./components /Education";
+import Experience from "./components /Experience";
+import Portfolio from "./components /Portfolio";
 import EmailWriter from "./emailwriter";
 import SocialLinks from "./sociallinks";
 import Image from 'next/image';
@@ -68,166 +71,10 @@ export default function Home() {
 
       </section>
 
-      <section className="py-10 md:py-16">
-
-        <div className="container max-w-screen-xl mx-auto px-4">
-
-          <div className="flex flex-col lg:flex-row justify-between">
-            <div className="mb-10 lg:mb-0">
-              <h1 className="font-medium text-gray-700 text-3xl md:text-4xl mb-5">Portfolio</h1>
-
-              <p className="font-normal text-gray-500 text-xs md:text-base">I have brought here my biggest and favorite works <br /> as a professional.</p>
-            </div>
-
-            <div className="space-y-24">
-              <div className="flex space-x-6">
-                <h1 className="font-normal text-gray-700 text-3xl md:text-4xl">01</h1>
-
-                <span className="w-28 h-0.5 bg-gray-300 mt-5"></span>
-
-                <div>
-                  <a href="https://github.com/pacsinta/signatureTester" className="font-normal text-gray-700 text-3xl md:text-4xl mb-5">
-                    <h1 className="font-normal text-gray-700 text-3xl md:text-4xl mb-5">Signature tester</h1>
-                  </a>
-
-                  <p className="font-normal text-gray-500 text-sm md:text-base">
-                    This software can validate handwritten signitures. <br /> 
-                    It uses a recurrent neural network to compare the signatures.  </p>
-                </div>
-              </div>
-
-              <div className="flex space-x-6">
-                <h1 className="font-normal text-gray-700 text-3xl md:text-4xl">02</h1>
-
-                <span className="w-28 h-0.5 bg-gray-300 mt-5"></span>
-
-                <div>
-                  <h1 className="font-normal text-gray-700 text-3xl md:text-4xl mb-5">Parking visualization</h1>
-
-                  <p className="font-normal text-gray-500 text-sm md:text-base">
-                    I was working on a project to develop parking software for automotives. <br /> 
-                    We were working on a SW capable 360<sup>o</sup> visualization around the car. </p>
-                </div>
-              </div>
-
-              <div className="flex space-x-6">
-                <h1 className="font-normal text-gray-700 text-3xl md:text-4xl">03</h1>
-
-                <span className="w-28 h-0.5 bg-gray-300 mt-5"></span>
-
-                <div>
-                  <a href="https://github.com/pacsinta/TenisMonsters">
-                    <h1 className="font-normal text-gray-700 text-3xl md:text-4xl mb-5">Tenis monsters game</h1>
-                  </a>
-
-                  <p className="font-normal text-gray-500 text-sm md:text-base">
-                    This is a multiplayer game where each player can control a monster. <br/>
-                    The goal is to successfully hit the ball to the other player&apos;s field.
-                    </p>
-                </div>
-              </div>
-
-              <div className="flex space-x-6">
-                <h1 className="font-normal text-gray-700 text-3xl md:text-4xl">04</h1>
-
-                <span className="w-28 h-0.5 bg-gray-300 mt-5"></span>
-
-                <div>
-                  <a href="https://play.google.com/store/apps/details?id=hu.bme.aut.android.mlkitproject">
-                    <h1 className="font-normal text-gray-700 text-3xl md:text-4xl mb-5">Can you find it</h1>
-                  </a>
-
-                  <p className="font-normal text-gray-500 text-sm md:text-base">
-                    I created this mobile app to try out text recognition on Android. <br />
-                    The goal in this app is to find a &quot;Hello World&quot; text with the camera in the real world. <br />
-                    If you find it, there is a reward for you.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </section>
-
-      <section className="py-10 md:py-16">
-        <div className="container max-w-screen-xl mx-auto px-4">
-          <h1 className="font-medium text-gray-700 text-3xl md:text-4xl mb-5">Education</h1>
-          <p className="font-normal text-gray-500 text-xs md:text-base mb-20">Below is a summary of the places I studied</p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-gray-50 px-8 py-10 rounded-md">
-              <h3 className="font-medium text-black text-lg mb-1">Szent István High School</h3>
-              <h4 className="font-medium text-gray-700 text-lg mb-4">2016 – 2020</h4>
-              <p className="font-normal text-gray-500 text-md mb-4">
-                I learned the basics here. I had the <br />
-                opportunity to learn robotics with the Lego <br />
-                Mindstorms / Arduino platforms and programming in C#. </p>
-              <div className="relative">
-                <a href="https://szigbp.hu/" className="font-semibold text-gray-500 text-md relative z-10">See the place here</a>
-                <span className="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 px-8 py-10 rounded-md">
-              <h3 className="font-medium text-black text-lg mb-1">Budapest University of Technology and Economics</h3>
-              <h4 className="font-medium text-gray-700 text-lg mb-4">2020 – 2024</h4>
-              <p className="font-normal text-gray-500 text-md mb-4">
-                This was the place where I started to <br /> 
-                understand the main concepts behind <br />
-                computers and programming. This is where <br />
-                 I created my first serious projects. </p>
-              <div className="relative">
-                <a href="https://www.vik.bme.hu/en/welcome-to-bme-vik/" className="font-semibold text-gray-500 text-md relative z-10">See the place here</a>
-                <span className="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 px-8 py-10 rounded-md">
-              <h3 className="font-medium text-black text-lg mb-1">Budapest University of Technology and Economics</h3>
-              <h4 className="font-medium text-gray-700 text-lg mb-4">2024 – (2026)</h4>
-              <p className="font-normal text-gray-500 text-md mb-4">
-                I&apos;m currently doing my Master&apos;s degree here. <br />
-                It is the continuation of the Bachler&apos;s course.  <br />
-                I hope I&apos;ll extend my knowledge with more <br />
-                useful SW architectures and skills. </p>
-              <div className="relative">
-                <a href="https://www.vik.bme.hu/en/welcome-to-bme-vik/" className="font-semibold text-gray-500 text-md relative z-10">See the place here</a>
-                <span className="w-32 h-1 bg-blue-200 absolute bottom-1 left-0 z-0"></span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </section>
-
-      <section className="py-10 md:py-16">
-        <div className="container max-w-screen-xl mx-auto px-4">
-          <h1 className="font-medium text-gray-700 text-3xl md:text-4xl mb-5">Experience</h1>
-          <p className="font-normal text-gray-500 text-xs md:text-base mb-20">Below is a summary of the places I worked at</p>
-
-          <div className="flex flex-col lg:flex-row justify-between">
-            <div className="space-y-8 md:space-y-16 mb-16 md:mb-0">
-              <h6 className="font-medium text-gray-400 text-base uppercase">Company</h6>
-              <p className="font-semibold text-gray-600 text-base">Robert Bosch <span className="font-normal text-gray-300">/ Budapest</span></p>
-            </div>
-
-            <div className="space-y-8 md:space-y-16 mb-16 md:mb-0">
-              <h6 className="font-medium text-gray-400 text-base uppercase">Position</h6>
-              <p className="font-normal text-gray-400 text-base">Junior embedded developer</p>
-            </div>
-
-            <div className="space-y-8 md:space-y-16">
-              <h6 className="font-medium text-gray-400 text-base uppercase">Year</h6>
-              <p className="font-normal text-gray-400 text-base">2022</p>
-            </div>
-          </div>
-
-        </div>
-
-      </section>
+      
+      <Portfolio />
+      <Experience />
+      <Education />
 
       <footer className="py-10 md:py-16 mb-20 md:mb-40 lg::mb-52">
 
