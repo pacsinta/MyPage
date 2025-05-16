@@ -40,14 +40,14 @@ export default function Portfolio() {
                             },
                             {
                                 title: "Signature tester",
-                                description: "This software can validate handwritten signitures. It uses a recurrent neural network to compare the signatures."
+                                description: "This software can validate handwritten signatures. It uses a recurrent neural network to compare the signatures."
                             },
                             {
                                 title: "Parking visualization",
-                                description: "I was working on a project to develop parking software for automotives. We were working on a SW capable 360° visualization around the car."
+                                description: "I was part of a project to develop parking software for automobiles. We were working on software capable of 360° visualization around the car."
                             },
                             {
-                                title: "Tenis monsters game",
+                                title: "Tennis monsters game",
                                 description: "This is a multiplayer game where each player can control a monster. The goal is to successfully hit the ball to the other player's field."
                             },
                             {
