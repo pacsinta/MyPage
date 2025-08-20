@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
             to: email,
             from: 'patrik.csikos@workhard.coffee',
             subject: "Verification of: " + subject,
-            react: EmailConfirmationTemplate({ email, emailBody }),
+            react: await EmailConfirmationTemplate({ email, emailBody }),
         });
 
         return NextResponse.json({ message: 'Email sent', response }, { status: 200 });

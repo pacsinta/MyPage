@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
             to: 'patrik.csikos@proton.me',
             from: 'patrik.csikos@workhard.coffee',
             subject: subject,
-            react: EmailTemplate({ email, emailBody }),
+            react: await EmailTemplate({ email, emailBody }),
         });
 
         return NextResponse.json({ message: 'Email sent', response }, { status: 200 });
