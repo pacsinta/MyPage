@@ -8,7 +8,6 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <div>
-
       <section className="py-10 md:py-16">
         <div className="container max-w-screen-xl mx-auto px-4">
           <nav className="flex items-center justify-between mb-40">
