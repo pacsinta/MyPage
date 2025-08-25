@@ -10,20 +10,20 @@ interface PortfolioElementProps {
 function PortfolioElement({ title, description, index, link }: PortfolioElementProps) {
     return (
         <div className="flex space-x-6 cursor-pointer">
-            <h1 className="font-normal text-gray-700 text-3xl md:text-4xl">{index}</h1>
+            <h1 className="font-normal text-gray-700 dark:text-gray-200 text-3xl md:text-4xl">{index}</h1>
 
-            <span className="w-28 h-0.5 bg-gray-300 mt-5"></span>
+            <span className="w-28 h-0.5 bg-gray-300 dark:bg-gray-700 mt-5"></span>
 
             <div className="w-full">
                 {link ? (
                     <Link href={link} target="_blank" rel="noopener noreferrer">
-                        <h2 className="font-normal text-gray-700 text-3xl md:text-4xl mb-5">{title}</h2>
-                        <p className="font-normal text-gray-500 text-sm md:text-base">{description}</p>
+                        <h2 className="font-normal text-gray-700 dark:text-gray-200 text-3xl md:text-4xl mb-5">{title}</h2>
+                        <p className="font-normal text-gray-500 dark:text-gray-400 text-sm md:text-base">{description}</p>
                     </Link>
                 ) : (
                     <>
-                        <h2 className="font-normal text-gray-700 text-3xl md:text-4xl mb-5">{title}</h2>
-                        <p className="font-normal text-gray-500 text-sm md:text-base">{description}</p>
+                        <h2 className="font-normal text-gray-700 dark:text-gray-200 text-3xl md:text-4xl mb-5">{title}</h2>
+                        <p className="font-normal text-gray-500 dark:text-gray-400 text-sm md:text-base">{description}</p>
                     </>
                 )}
             </div>
@@ -39,9 +39,9 @@ export default function Portfolio() {
 
                 <div className="flex flex-col lg:flex-row justify-between">
                     <div className="mb-10 lg:mb-0 lg:w-2/5 flex-shrink-0">
-                        <h1 className="font-medium text-gray-700 text-3xl md:text-4xl mb-5">Portfolio</h1>
+                        <h1 className="font-medium text-gray-700 dark:text-gray-200 text-3xl md:text-4xl mb-5">Portfolio</h1>
 
-                        <p className="font-normal text-gray-500 text-xs md:text-base">I have brought here my biggest and favorite works <br /> as a professional.</p>
+                        <p className="font-normal text-gray-500 dark:text-gray-400 text-xs md:text-base">I have brought here my biggest and favorite works <br /> as a professional.</p>
                     </div>
 
                     <div className="space-y-24">
