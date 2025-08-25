@@ -47,25 +47,26 @@ export default function Portfolio() {
                     <div className="space-y-24">
                         {[
                             {
-                                title: "Contract change classifier",
-                                description: "I helped to develop a software that can classify contract changes. Is used an LLM to classify each modified section of the contract into a predefined category.",
+                                title: "Contract Change Classifier",
+                                description: "Developed a tool that uses large language models to categorize contract modifications into predefined classes, helping with contract management and analysis.",
+                                link: "https://github.com/pacsinta/contract-classifier"
                             },
                             {
-                                title: "CIS benchmark analyzer",
-                                description: "This software can analyze if the system is compliant with the CIS benchmark. It uses generative AI to read and verify the system settings and compare them with the benchmark.",
+                                title: "CIS Benchmark Analyzer",
+                                description: "Created a solution that leverages generative AI to assess system compliance with CIS benchmarks by automatically evaluating configurations against security standards.",
                             },
                             {
-                                title: "Signature tester",
-                                description: "This software can validate handwritten signatures. It uses a recurrent neural network to compare the signatures.",
+                                title: "Signature Verification System",
+                                description: "Built an application that validates handwritten signatures using recurrent neural networks for comparison and authentication purposes.",
                                 link: "https://github.com/pacsinta/signatureTester"
                             },
                             {
-                                title: "Parking visualization",
-                                description: "I was part of a project to develop parking software for automobiles. We were working on software capable of 360° visualization around the car."
+                                title: "360° Parking Visualization",
+                                description: "Contributed to an automotive parking system that provides drivers with a comprehensive 360-degree view of their surroundings for safer parking maneuvers."
                             },
                             {
-                                title: "Tennis monsters game",
-                                description: "This is a multiplayer game where each player can control a monster. The goal is to successfully hit the ball to the other player's field."
+                                title: "Tennis Monsters",
+                                description: "Designed a multiplayer game where players control monsters in a tennis-style competition, aiming to successfully return the ball to the opponent's court."
                             }
                         ].map((project, idx) => (
                             <PortfolioElement
