@@ -39,7 +39,7 @@ export default function EmailWriter() {
     };
 
     const modal = showModal ? (
-        <div className="fixed inset-0 bg-gray-600 bg-opacity-50 dark:bg-black dark:bg-opacity-60 overflow-y-auto h-full w-full flex items-center justify-center z-20">
+        <div className="fixed inset-0 bg-gray-600/70 dark:bg-black/70 overflow-y-auto h-full w-full flex items-center justify-center z-50">
             <div className="p-8 border w-96 shadow-lg rounded-md bg-white dark:bg-gray-800 dark:border-gray-700">
                 <div className="space-y-4">
                     <div>
