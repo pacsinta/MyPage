@@ -1,6 +1,6 @@
 import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
-import { EmailConfirmationTemplate } from '@/app/components /Email-template';
+import { EmailConfirmationTemplate } from './../../components/Email-template';
 
 const resend = new Resend(process.env.RESEND_TOKEN);
 

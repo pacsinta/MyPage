@@ -1,6 +1,6 @@
-import Education from "./components /Education";
-import Experience from "./components /Experience";
-import Portfolio from "./components /Portfolio";
+import Education from "./components/Education";
+import Experience from "./components/Experience";
+import Portfolio from "./components/Portfolio";
 import EmailWriter from "./emailwriter";
 import SocialLinks from "./sociallinks";
 import Image from 'next/image';
