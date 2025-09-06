@@ -39,42 +39,42 @@ export default function EmailWriter() {
     };
 
     const modal = showModal ? (
-        <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full flex items-center justify-center z-20">
-            <div className="p-8 border w-96 shadow-lg rounded-md bg-white">
+        <div className="fixed inset-0 bg-gray-600 bg-opacity-50 dark:bg-black dark:bg-opacity-60 overflow-y-auto h-full w-full flex items-center justify-center z-20">
+            <div className="p-8 border w-96 shadow-lg rounded-md bg-white dark:bg-gray-800 dark:border-gray-700">
                 <div className="space-y-4">
                     <div>
-                        <h3 className="text-2xl font-bold text-gray-900">Call me:</h3>
-                        <h3 className="text-xl font-bold text-gray-700">+36 70 4180883</h3>
+                        <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Call me:</h3>
+                        <h3 className="text-xl font-bold text-gray-700 dark:text-gray-300">+36 70 4180883</h3>
                     </div>
                 </div>
                 <div className="text-center">
-                    <h3 className="text-2xl font-bold text-gray-900 mt-5">Or write me a message:</h3>
+                    <h3 className="text-2xl font-bold text-gray-900 mt-5 dark:text-gray-100">Or write me a message:</h3>
                     <div className="mt-2 px-7 py-3">
                         <form className="mt-4" onSubmit={handleSubmit}>
                             <div className="mb-4">
-                                <label htmlFor="recipient" className="block text-left text-gray-700">
+                                <label htmlFor="email" className="block text-left text-gray-700 dark:text-gray-300">
                                     Your email:
                                 </label>
                                 <input
                                     type="email"
                                     id="email"
                                     name="email"
-                                    className="mt-1 p-2 w-full border rounded-md"
-                                    placeholder="Recipient's email"
+                                    className="mt-1 p-2 w-full border rounded-md bg-white text-gray-900 placeholder-gray-500 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:bg-gray-700 dark:text-gray-100 dark:placeholder-gray-400 dark:border-gray-600 dark:focus:ring-blue-500"
+                                    placeholder="Your email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     required
                                 />
                             </div>
                             <div className="mb-4">
-                                <label htmlFor="subject" className="block text-left text-gray-700">
+                                <label htmlFor="subject" className="block text-left text-gray-700 dark:text-gray-300">
                                     Subject:
                                 </label>
                                 <input
                                     type="text"
                                     id="subject"
                                     name="subject"
-                                    className="mt-1 p-2 w-full border rounded-md"
+                                    className="mt-1 p-2 w-full border rounded-md bg-white text-gray-900 placeholder-gray-500 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:bg-gray-700 dark:text-gray-100 dark:placeholder-gray-400 dark:border-gray-600 dark:focus:ring-blue-500"
                                     placeholder="Email subject"
                                     value={subject}
                                     onChange={(e) => setSubject(e.target.value)}
@@ -82,13 +82,13 @@ export default function EmailWriter() {
                                 />
                             </div>
                             <div className="mb-4">
-                                <label htmlFor="body" className="block text-left text-gray-700">
+                                <label htmlFor="body" className="block text-left text-gray-700 dark:text-gray-300">
                                     Body:
                                 </label>
                                 <textarea
                                     id="body"
                                     name="body"
-                                    className="mt-1 p-2 w-full border rounded-md"
+                                    className="mt-1 p-2 w-full border rounded-md bg-white text-gray-900 placeholder-gray-500 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:bg-gray-700 dark:text-gray-100 dark:placeholder-gray-400 dark:border-gray-600 dark:focus:ring-blue-500"
                                     rows={4}
                                     placeholder="Write your email here"
                                     value={emailBody}
@@ -99,7 +99,7 @@ export default function EmailWriter() {
                             <div className="flex justify-center mt-4 w-full">
                                 <button
                                     type="submit"
-                                    className="w-24 px-4 py-2 bg-green-600 text-white text-base font-medium rounded-md shadow-sm hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                                    className="w-24 px-4 py-2 bg-green-600 text-white text-base font-medium rounded-md shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-blue-500">
                                     Send
                                 </button>
                             </div>
@@ -107,7 +107,7 @@ export default function EmailWriter() {
                     </div>
                     <div className="flex justify-center mt-4 w-full">
                         <button 
-                            className="w-24 px-4 py-2 bg-gray-500 text-white text-base font-medium rounded-md shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-300"
+                            className="w-24 px-4 py-2 bg-gray-500 text-white text-base font-medium rounded-md shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-500 dark:focus:ring-gray-500"
                             onClick={() => setShowModal(false)}>
                             Close
                         </button>
@@ -121,7 +121,7 @@ export default function EmailWriter() {
         <div>
             <Toaster position="top-center" />
             <button 
-                className="px-7 py-3 md:px-9 md:py-4 font-medium md:font-semibold bg-gray-700 text-gray-50 text-sm rounded-md hover:bg-gray-50 hover:text-gray-700 transition ease-linear duration-300"
+                className="px-7 py-3 md:px-9 md:py-4 font-medium md:font-semibold bg-gray-700 text-gray-50 text-sm rounded-md hover:bg-gray-50 hover:text-gray-700 transition ease-linear duration-300 dark:bg-gray-200 dark:text-gray-800 dark:hover:bg-gray-300 dark:hover:text-gray-900"
                 onClick={() => setShowModal(true)}>
                 Notify me
             </button>
