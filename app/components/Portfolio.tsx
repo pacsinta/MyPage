@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { title } from "process";
 
 interface PortfolioElementProps {
     title: string;
@@ -47,26 +48,34 @@ export default function Portfolio() {
                     <div className="space-y-24">
                         {[
                             {
+                                title: "Storage AI",
+                                description: "I built a cloud storage app that uses an LLM to help with file management and search. It is deployed to my homelab Kubernetes server, and I hope it will be live soon."
+                            },
+                            {
+                                title: "Cyber security ticketing page",
+                                description: "I collaborated on the development of a vulnerability management webpage designed to track security findings, coordinate testing schedules, and streamline application requests."
+                            },
+                            {
                                 title: "Contract Change Classifier",
-                                description: "Developed a tool that uses large language models to categorize contract modifications into predefined classes, helping with contract management and analysis.",
+                                description: "I helped develop a tool that uses large language models to categorize contract modifications into predefined classes, helping with contract management and analysis.",
                                 link: "https://github.com/pacsinta/contract-classifier"
                             },
                             {
                                 title: "CIS Benchmark Analyzer",
-                                description: "Created a solution that leverages generative AI to assess system compliance with CIS benchmarks by automatically evaluating configurations against security standards.",
+                                description: "I created a solution that leverages generative AI to assess system compliance with CIS benchmarks by automatically evaluating configurations against security standards.",
                             },
                             {
                                 title: "Signature Verification System",
-                                description: "Built an application that validates handwritten signatures using recurrent neural networks for comparison and authentication purposes.",
+                                description: "I built an application that validates handwritten signatures using recurrent neural networks for comparison and authentication purposes.",
                                 link: "https://github.com/pacsinta/signatureTester"
                             },
                             {
                                 title: "360° Parking Visualization",
-                                description: "Contributed to an automotive parking system that provides drivers with a comprehensive 360-degree view of their surroundings for safer parking maneuvers."
+                                description: "I contributed to an automotive parking system that provides drivers with a comprehensive 360-degree view of their surroundings for safer parking maneuvers."
                             },
                             {
                                 title: "Tennis Monsters",
-                                description: "Designed a multiplayer game where players control monsters in a tennis-style competition, aiming to successfully return the ball to the opponent's court."
+                                description: "I designed a multiplayer game where players control monsters in a tennis-style competition, aiming to successfully return the ball to the opponent's court."
                             }
                         ].map((project, idx) => (
                             <PortfolioElement
